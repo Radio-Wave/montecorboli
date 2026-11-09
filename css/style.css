@@ -880,3 +880,15 @@ body::before {
   .menu-card { width: 88%; }
   .eat .collage .snap.second { width: 46%; bottom: -40px; }
 }
+
+/* Calmer: plain underline instead of the squiggle */
+.room-more {
+  background-image: none;
+  padding-bottom: 2px;
+  text-decoration: underline;
+  text-decoration-color: var(--terracotta);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+.room-more:hover { color: var(--terracotta); }
+.menu-card a { color: var(--terracotta); text-underline-offset: 4px; }

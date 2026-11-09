@@ -32,12 +32,11 @@
 <section class="page-hero">
   <div class="wrap split">
     <div>
-      <p class="eyebrow">Private chef</p>
-      <h1>I'll cook for you where you're staying.</h1>
-      <p class="lede">If you're at an agriturismo nearby, I'll come to you with the shopping, cook a proper Tuscan dinner and leave the kitchen clean.</p>
+      <p class="eyebrow">private chef</p>
+      <h1>A private chef where you're staying.</h1>
+      <p class="lede">If you're staying at an agriturismo nearby, I can come and cook for you.</p>
       <div class="btn-row">
         <a class="btn" href="#enquire">Ask about a date</a>
-        <a class="btn ghost" href="#menus">See the menus</a>
       </div>
     </div>
     <figure class="photo tall" style="margin:0">
@@ -48,68 +47,36 @@
 
 <section class="panel" id="menus">
   <div class="wrap">
-    <p class="eyebrow">Menus</p>
-    <h2>What I like to cook.</h2>
-    <p>Everything follows the season and what's good at the market that week. I'm happy to work around allergies, children and vegetarians.</p>
-    <!-- EDIT MENUS HERE: copy a <article class="menu"> block to add a new one. -->
+    <p class="eyebrow">menus</p>
+    <h2>Menus coming soon.</h2>
+    <p>My menus will be here shortly. In the meantime, <a href="#enquire">ask me</a> and I'll send you the current one.</p>
+    <!-- ADD MENUS HERE. Replace the paragraph above with blocks like this:
     <div class="menus">
-      <article class="menu reveal">
-        <h3>Tuscan Supper</h3>
-        <p class="menu-note">Four courses · sample menu</p>
+      <article class="menu">
+        <h3>Menu name</h3>
+        <p class="menu-note">short note</p>
         <dl>
-          <dt>To start</dt><dd>Crostini with chicken liver, and with fresh ricotta and honey</dd>
-          <dt>Primo</dt><dd>Hand-rolled pici with garlic, tomato and breadcrumbs</dd>
-          <dt>Secondo</dt><dd>Slow-roast pork with fennel and rosemary, cannellini beans</dd>
-          <dt>Dolce</dt><dd>Olive oil cake with poached pears</dd>
-        </dl>
-      </article>
-      <article class="menu reveal">
-        <h3>From the Garden</h3>
-        <p class="menu-note">Vegetarian · sample menu</p>
-        <dl>
-          <dt>To start</dt><dd>Panzanella with summer tomatoes and basil</dd>
-          <dt>Primo</dt><dd>Ribollita, or ricotta and herb gnudi in sage butter</dd>
-          <dt>Secondo</dt><dd>Aubergine parmigiana, green salad from the garden</dd>
-          <dt>Dolce</dt><dd>Peaches baked with amaretti</dd>
-        </dl>
-      </article>
-      <article class="menu reveal">
-        <h3>Long Lunch</h3>
-        <p class="menu-note">Sharing plates · sample menu</p>
-        <dl>
-          <dt>On the table</dt><dd>Local salumi, pecorino, focaccia and marinated vegetables</dd>
-          <dt>Then</dt><dd>A big bowl of pasta with whatever the season brings</dd>
-          <dt>And</dt><dd>Cantucci and vin santo, coffee</dd>
+          <dt>Course</dt><dd>Dish</dd>
+          <dt>Course</dt><dd>Dish</dd>
         </dl>
       </article>
     </div>
+    -->
   </div>
 </section>
 
 <section>
-  <div class="wrap split">
-    <div>
-      <p class="eyebrow">How it works</p>
-      <h2>Simple, and all done for you.</h2>
-      <ul class="ticks">
-        <li>Tell me the date, how many of you, and where you're staying.</li>
-        <li>We choose a menu together and I sort out any dietary needs.</li>
-        <li>I shop, cook, serve and clean up. You sit down.</li>
-        <li>Prices are on request and depend on the menu and group size.</li>
-      </ul>
-    </div>
-    <div>
-      <p class="eyebrow">Where I cook</p>
-      <h3>Agriturismos and villas near Montecorboli</h3>
-      <!-- TODO: list the agriturismos covered (open question in brief) -->
-      <p>I cover the agriturismos and holiday houses in the hills around us. If you're not sure whether you're close enough, just ask.</p>
-    </div>
+  <div class="wrap">
+    <p class="eyebrow">where I cook</p>
+    <h2>Agriturismos near Montecorboli.</h2>
+    <!-- TODO: list the agriturismos covered (open question in the brief) -->
+    <p>Tell me where you're staying and I'll let you know if I can come to you.</p>
   </div>
 </section>
 
 <section class="panel" id="enquire">
   <div class="wrap">
-    <p class="eyebrow">Enquire</p>
+    <p class="eyebrow">enquire</p>
     <h2>Ask about a date.</h2>
     <form class="form" data-enquiry>
       <input type="hidden" name="_subject" value="Private chef enquiry">
@@ -119,7 +86,7 @@
       <div><label for="pc-date">Date</label><input id="pc-date" type="date" name="date"></div>
       <div><label for="pc-guests">Number of guests</label><input id="pc-guests" type="number" name="guests" min="1" max="40"></div>
       <div class="full"><label for="pc-where">Where are you staying?</label><input id="pc-where" name="staying_at" placeholder="Name of the agriturismo or house"></div>
-      <div class="full"><label for="pc-msg">Anything else?</label><textarea id="pc-msg" name="message" placeholder="Allergies, occasions, the menu you liked…"></textarea></div>
+      <div class="full"><label for="pc-msg">Anything else?</label><textarea id="pc-msg" name="message" placeholder="Dietary needs, the occasion, questions…"></textarea></div>
       <div class="full"><button class="btn" type="submit">Send enquiry</button></div>
       <p class="form-status" aria-live="polite"></p>
     </form>
@@ -131,7 +98,7 @@
     <div class="footer-grid">
       <div>
         <a class="logo" href="index.html">Montecorboli</a>
-        <p>Food, art and hospitality in Tuscany. A home we built by hand, now open to guests who love good food, books and the outdoors.</p>
+        <p>Food, art and hospitality in Tuscany.</p>
       </div>
       <div>
         <h4>Visit</h4>
@@ -144,7 +111,7 @@
       </div>
       <div>
         <h4>Letters from the hill</h4>
-        <p>A few emails a year: new menus, paintings and dates.</p>
+        <p>News, dates and new paintings.</p>
         <form data-newsletter>
           <div class="newsletter">
             <label class="visually-hidden" for="nl-email">Email</label>
