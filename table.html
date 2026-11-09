@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lunches, Dinners &amp; Evenings · Montecorboli</title>
+<meta name="description" content="Lunches for cycling and walking tours, private dinners and jazz evenings at Montecorboli, Tuscany.">
+<meta property="og:title" content="Lunches, Dinners &amp; Evenings · Montecorboli">
+<meta property="og:description" content="Lunches for cycling and walking tours, private dinners and jazz evenings at Montecorboli, Tuscany.">
+<meta property="og:image" content="images/terrace-dinner.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">Montecorboli<span>.</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <ul class="nav" id="nav">
+      <li><a href="private-chef.html">Private Chef</a></li>
+      <li><a href="table.html" aria-current="page">Lunches &amp; Dinners</a></li>
+      <li><a href="stay.html">Stay</a></li>
+      <li><a href="index.html#story">Our Story</a></li>
+      <li><a class="btn" href="contact.html">Enquire</a></li>
+    </ul>
+  </div>
+</header>
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Lunches, dinners &amp; evenings</p>
+    <h1>Come and eat at our table.</h1>
+    <p class="lede">Lunch stops for cyclists and walkers, private dinners for small groups, and now and then an evening of jazz. The paintings are on the walls around you.</p>
+    <div class="btn-row"><a class="btn" href="#enquire">Book a table</a></div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <figure class="photo wide" style="margin:0;aspect-ratio:16/8">
+      <img src="images/terrace-dinner.jpg" alt="Guests at dinner on the terrace, with the hills beyond" style="object-position:center 65%">
+    </figure>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="wrap">
+    <p class="eyebrow">What we offer</p>
+    <h2>Four kinds of table.</h2>
+    <div class="cards">
+      <article class="card reveal">
+        <span class="tag">Tour groups</span>
+        <h3>Lunch for cyclists</h3>
+        <p>A proper sit-down lunch halfway through the ride: shade, water, pasta and a bit of rest. I can work around your route and timings.</p>
+        <p class="meta">For organised cycling tours</p>
+      </article>
+      <article class="card reveal">
+        <span class="tag">Tour groups</span>
+        <h3>Lunch for walkers</h3>
+        <p>Come in off the trail for a long table, local food and a look at the studio before you head on.</p>
+        <p class="meta">For organised walking tours</p>
+      </article>
+      <article class="card reveal">
+        <span class="tag">Small groups</span>
+        <h3>Private dinners</h3>
+        <p>Dinner for your group on the terrace as the sun goes down. Good for birthdays, reunions, or just a good night.</p>
+        <p class="meta">Small groups, menus on request</p>
+      </article>
+      <article class="card reveal">
+        <span class="tag soon">Occasional</span>
+        <h3>Jazz evenings</h3>
+        <p>Live music, dinner and a warm night outside. Dates go out first to the newsletter.</p>
+        <p class="meta">Join the newsletter for dates</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <figure class="photo tall" style="margin:0">
+      <img src="images/painting-outdoors.jpg" alt="An easel among the olive trees at Montecorboli" loading="lazy">
+    </figure>
+    <div>
+      <p class="eyebrow">The setting</p>
+      <h2>Under the pergola, among the olives.</h2>
+      <p>We eat outside whenever we can, with stone walls, the garden and the hills all around. A covered outdoor area is on the way, so we can feed bigger groups whatever the weather.</p>
+      <p>The paintings around the house are mine. If one catches your eye over lunch, ask me about it.</p>
+      <h3 style="margin-top:1.4em">Event hire</h3>
+      <p>The house is also available for small events: private or company, with me catering or on your own. <a href="contact.html?interest=events">Ask me about it</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="enquire">
+  <div class="wrap">
+    <p class="eyebrow">Enquire</p>
+    <h2>Book a table.</h2>
+    <form class="form" data-enquiry>
+      <input type="hidden" name="_subject" value="Lunch / dinner enquiry">
+      <div><label for="t-name">Your name</label><input id="t-name" name="name" required autocomplete="name"></div>
+      <div><label for="t-email">Email</label><input id="t-email" type="email" name="email" required autocomplete="email"></div>
+      <div>
+        <label for="t-type">What would you like?</label>
+        <select id="t-type" name="interest">
+          <option value="tour-lunch">Lunch for a cycling or walking tour</option>
+          <option value="dinner">A private dinner</option>
+          <option value="jazz">A jazz evening</option>
+          <option value="events">An event</option>
+        </select>
+      </div>
+      <div><label for="t-guests">Number of guests</label><input id="t-guests" type="number" name="guests" min="1" max="80"></div>
+      <div class="full"><label for="t-date">Date(s)</label><input id="t-date" name="dates" placeholder="A date, or a rough time of year"></div>
+      <div class="full"><label for="t-msg">Tell me a bit more</label><textarea id="t-msg" name="message"></textarea></div>
+      <div class="full"><button class="btn" type="submit">Send enquiry</button></div>
+      <p class="form-status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html">Montecorboli</a>
+        <p>Food, art and hospitality in Tuscany. A home we built by hand, now open to guests who love good food, books and the outdoors.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="private-chef.html">Private Chef</a></li>
+          <li><a href="table.html">Lunches, Dinners &amp; Evenings</a></li>
+          <li><a href="stay.html">Stay</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Letters from the hill</h4>
+        <p>A few emails a year: new menus, paintings and dates.</p>
+        <form data-newsletter>
+          <div class="newsletter">
+            <label class="visually-hidden" for="nl-email">Email</label>
+            <input id="nl-email" type="email" name="email" placeholder="Your email" required>
+            <input type="hidden" name="_subject" value="Newsletter sign-up">
+            <button class="btn" type="submit">Sign up</button>
+          </div>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>&copy; <span data-year>2026</span> Montecorboli, Tuscany</span>
+      <span>English · <span title="Coming later">Italiano presto</span></span>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

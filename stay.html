@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stay · Montecorboli</title>
+<meta name="description" content="B&amp;B rooms and a whole-house holiday rental at Montecorboli, Tuscany.">
+<meta property="og:title" content="Stay · Montecorboli">
+<meta property="og:description" content="B&amp;B rooms and a whole-house holiday rental at Montecorboli, Tuscany.">
+<meta property="og:image" content="images/terrace-dinner.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">Montecorboli<span>.</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <ul class="nav" id="nav">
+      <li><a href="private-chef.html">Private Chef</a></li>
+      <li><a href="table.html">Lunches &amp; Dinners</a></li>
+      <li><a href="stay.html" aria-current="page">Stay</a></li>
+      <li><a href="index.html#story">Our Story</a></li>
+      <li><a class="btn" href="contact.html">Enquire</a></li>
+    </ul>
+  </div>
+</header>
+<main>
+<section class="page-hero">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Stay</p>
+      <h1>Sleep here, wake up to the hills.</h1>
+      <p class="lede">Two double rooms as a B&amp;B, or the whole house for a month or two each year. For people who like to be outdoors all day and well fed at night.</p>
+      <div class="btn-row"><a class="btn" href="#enquire">Check dates</a></div>
+    </div>
+    <figure class="photo tall" style="margin:0">
+      <img src="images/sitting-room.jpg" alt="The sitting room with its fireplace in evening light">
+    </figure>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="wrap">
+    <div class="cards">
+      <article class="card reveal">
+        <span class="tag">B&amp;B</span>
+        <h3>Two double rooms</h3>
+        <p>Stay with us in one of two spare double bedrooms. Breakfast is included, and you're welcome to join us for dinner.</p>
+        <ul class="ticks">
+          <li>Breakfast every morning</li>
+          <li>Dinner on request</li>
+          <li>Walks and rides from the door</li>
+          <li>Books, a fireplace and a garden</li>
+        </ul>
+        <p class="meta">Prices on request</p>
+      </article>
+      <article class="card reveal">
+        <span class="tag">Holiday house</span>
+        <h3>The whole house</h3>
+        <p>For one or two months a year, the house is yours. Bring friends or family and make it your Tuscan home for a while.</p>
+        <ul class="ticks">
+          <li>Available for limited weeks each year</li>
+          <li>Private chef dinners can be added</li>
+          <li>Studio space for painters, on request</li>
+        </ul>
+        <p class="meta">Ask for available dates</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Around the house</p>
+    <h2>Still being made, and that's part of it.</h2>
+    <p>We've built Montecorboli ourselves over four years. It's comfortable and ready for guests, and every season we add something new.</p>
+    <div class="strip" style="margin-top:40px">
+      <figure class="photo reveal" style="margin:0"><img src="images/house.jpg" alt="The front of the house under the pergola" loading="lazy"></figure>
+      <figure class="photo reveal" style="margin:0"><img src="images/studio.jpg" alt="The studio" loading="lazy"></figure>
+      <figure class="photo reveal" style="margin:0"><img src="images/pond.jpg" alt="The lily pond" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="enquire">
+  <div class="wrap">
+    <p class="eyebrow">Enquire</p>
+    <h2>Check dates.</h2>
+    <form class="form" data-enquiry>
+      <input type="hidden" name="_subject" value="Stay enquiry">
+      <div><label for="s-name">Your name</label><input id="s-name" name="name" required autocomplete="name"></div>
+      <div><label for="s-email">Email</label><input id="s-email" type="email" name="email" required autocomplete="email"></div>
+      <div>
+        <label for="s-type">Which stay?</label>
+        <select id="s-type" name="interest">
+          <option value="bnb">B&amp;B room</option>
+          <option value="house">The whole house</option>
+        </select>
+      </div>
+      <div><label for="s-guests">Guests</label><input id="s-guests" type="number" name="guests" min="1" max="12"></div>
+      <div><label for="s-in">Arriving</label><input id="s-in" type="date" name="arrive"></div>
+      <div><label for="s-out">Leaving</label><input id="s-out" type="date" name="leave"></div>
+      <div class="full"><label for="s-msg">Anything else?</label><textarea id="s-msg" name="message"></textarea></div>
+      <div class="full"><button class="btn" type="submit">Send enquiry</button></div>
+      <p class="form-status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html">Montecorboli</a>
+        <p>Food, art and hospitality in Tuscany. A home we built by hand, now open to guests who love good food, books and the outdoors.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="private-chef.html">Private Chef</a></li>
+          <li><a href="table.html">Lunches, Dinners &amp; Evenings</a></li>
+          <li><a href="stay.html">Stay</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Letters from the hill</h4>
+        <p>A few emails a year: new menus, paintings and dates.</p>
+        <form data-newsletter>
+          <div class="newsletter">
+            <label class="visually-hidden" for="nl-email">Email</label>
+            <input id="nl-email" type="email" name="email" placeholder="Your email" required>
+            <input type="hidden" name="_subject" value="Newsletter sign-up">
+            <button class="btn" type="submit">Sign up</button>
+          </div>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>&copy; <span data-year>2026</span> Montecorboli, Tuscany</span>
+      <span>English · <span title="Coming later">Italiano presto</span></span>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
