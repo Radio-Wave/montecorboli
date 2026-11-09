@@ -11,7 +11,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -29,95 +29,148 @@
   </div>
 </header>
 <main>
-<section class="hero" style="padding:0">
-  <img src="images/house.jpg" alt="The stone house at Montecorboli under its pergola, in morning sun">
+<section class="home-top" style="padding-bottom:0">
   <div class="wrap">
-    <p class="eyebrow">Food, art and hospitality in Tuscany</p>
-    <h1>A long table in the sun.</h1>
-    <p>I cook, I paint and I love having people to stay. Montecorboli is where all three happen.</p>
-    <div class="btn-row">
-      <a class="btn" href="contact.html">Make an enquiry</a>
-      <a class="btn ghost" href="#paths">See what we offer</a>
-    </div>
+    <h1 class="wordmark">Montecorboli</h1>
+    <p class="note">painting, cooking and having people over, in our home in the Tuscan hills</p>
   </div>
-</section>
-
-<section id="paths">
-  <div class="wrap">
-    <p class="eyebrow">Four ways in</p>
-    <h2>Come to eat, to stay,<br>to gather, or to paint.</h2>
-    <div class="paths">
-      <a class="path eat reveal" href="private-chef.html">
-        <h3>Eat</h3>
-        <div><p>A private chef at your agriturismo, or lunch and dinner here on the terrace.</p><span class="arrow">&rarr;</span></div>
-      </a>
-      <a class="path stay reveal" href="stay.html">
-        <h3>Stay</h3>
-        <div><p>Two double rooms as a B&amp;B, or the whole house for your holiday.</p><span class="arrow">&rarr;</span></div>
-      </a>
-      <a class="path host reveal" href="table.html">
-        <h3>Host</h3>
-        <div><p>Private dinners, jazz evenings, tour-group lunches and small events.</p><span class="arrow">&rarr;</span></div>
-      </a>
-      <a class="path art reveal" href="contact.html?interest=art">
-        <h3>Art</h3>
-        <div><p>See and buy paintings, join a painting retreat, or come for a residency.</p><span class="arrow">&rarr;</span></div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="panel" id="story">
-  <div class="wrap split">
-    <div class="reveal">
-      <p class="eyebrow">Our story</p>
-      <h2>We built it <em class="accent">by hand.</em></h2>
-      <p class="lede">Montecorboli is our home. For four years we've been getting it ready, one wall, one bed and one plant at a time.</p>
-      <p>I wanted somewhere for a certain kind of guest: people who like to walk or cycle all morning, read in the afternoon and eat well at night. It's ready enough to start now, and it will keep growing.</p>
-      <p>Everything here comes from the things I've always done for a living: painting, cooking and looking after people.</p>
-    </div>
-    <figure class="photo tall reveal" style="margin:0">
-      <img src="images/sitting-room.jpg" alt="Evening sun on the fireplace in the round sitting room" loading="lazy">
+  <nav class="four" aria-label="Four ways in">
+    <a class="block eat" href="#eat"><span class="word">eat</span><small>private chef, lunches, dinners</small></a>
+    <a class="block stay" href="#stay"><span class="word">stay</span><small>B&amp;B rooms, the whole house</small></a>
+    <a class="block host" href="#host"><span class="word">host</span><small>evenings, jazz, events</small></a>
+    <a class="block art" href="#art"><span class="word">art</span><small>paintings, retreats, residencies</small></a>
+    <figure class="four-photo">
+      <img src="images/terrace-dinner.jpg" alt="Dinner under the glass pergola at dusk, with the hills beyond">
+      <figcaption>supper under the pergola</figcaption>
     </figure>
-  </div>
+  </nav>
+<svg class="hills" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 62 C 90 58, 140 30, 230 34 S 380 66, 470 52 S 600 18, 700 26 S 860 60, 960 48 S 1110 30, 1200 40" stroke="#B8532F"/>
+  <path d="M0 72 C 120 70, 200 50, 320 56 S 520 76, 640 66 S 820 46, 940 58 S 1120 72, 1200 64" stroke="#6B7345" opacity=".7"/>
+</svg>
 </section>
 
-<section>
-  <div class="wrap">
-    <div class="strip">
-      <figure class="photo reveal" style="margin:0"><img src="images/painting-outdoors.jpg" alt="An easel set up on the path, painting the olive trees" loading="lazy"></figure>
-      <figure class="photo reveal" style="margin:0"><img src="images/terrace-dinner.jpg" alt="Dinner under the glass pergola at dusk" loading="lazy"></figure>
-      <figure class="photo reveal" style="margin:0"><img src="images/pond.jpg" alt="The stone lily pond in the garden" loading="lazy"></figure>
+<section class="room eat" id="eat">
+  <div class="wrap room-grid">
+    <div class="room-text">
+      <span class="room-word">eat</span>
+      <h2>I cook the way we eat at home: generous, seasonal, and with plenty of time at the table.</h2>
+      <p>Book me as a private chef at your agriturismo, or come up the hill for lunch or dinner on our terrace.</p>
+      <ul class="offers">
+        <li><a href="private-chef.html"><b>Private chef</b><i>at your agriturismo</i></a></li>
+        <li><a href="table.html"><b>Lunch for cyclists &amp; walkers</b><i>tour groups</i></a></li>
+        <li><a href="table.html"><b>Dinner on the terrace</b><i>small groups</i></a></li>
+      </ul>
+      <a class="room-more" href="private-chef.html#menus">See my menus</a>
+    </div>
+    <div class="collage">
+      <div class="snap menu-card">
+        <h4>Tuscan Supper</h4>
+        <p class="date">tonight, for eight</p>
+        <p><small>to start</small>Crostini, chicken liver &amp; ricotta with honey</p>
+        <p><small>primo</small>Hand-rolled pici, garlic &amp; tomato</p>
+        <p><small>secondo</small>Slow-roast pork, fennel, cannellini</p>
+        <p><small>dolce</small>Olive oil cake, poached pears</p>
+        <div class="flourish">~</div>
+      </div>
+      <figure class="snap second">
+        <img src="images/pond.jpg" alt="The stone lily pond in the garden" loading="lazy" style="object-position:30% center">
+        <figcaption>the garden, after lunch</figcaption>
+      </figure>
+    </div>
+  </div>
+<svg class="hills" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 62 C 90 58, 140 30, 230 34 S 380 66, 470 52 S 600 18, 700 26 S 860 60, 960 48 S 1110 30, 1200 40" stroke="#6B7345"/>
+  <path d="M0 72 C 120 70, 200 50, 320 56 S 520 76, 640 66 S 820 46, 940 58 S 1120 72, 1200 64" stroke="#D9A441" opacity=".7"/>
+</svg>
+</section>
+
+<section class="room stay sand flip" id="stay">
+  <div class="wrap room-grid">
+    <div class="room-text">
+      <span class="room-word">stay</span>
+      <h2>Two spare rooms, a fireplace, a lot of books and walks straight from the door.</h2>
+      <p>Stay with us as a B&amp;B, or have the whole house to yourselves for a few weeks in the year.</p>
+      <ul class="offers">
+        <li><a href="stay.html"><b>B&amp;B</b><i>two double rooms</i></a></li>
+        <li><a href="stay.html"><b>The whole house</b><i>one or two months a year</i></a></li>
+      </ul>
+      <a class="room-more" href="stay.html">About staying here</a>
+    </div>
+    <div class="collage">
+      <figure class="snap main" style="--tilt:-2deg">
+        <img src="images/sitting-room.jpg" alt="Evening sun on the fireplace in the round sitting room" loading="lazy" style="object-position:35% center">
+        <figcaption>the sitting room, about seven in the evening</figcaption>
+      </figure>
+    </div>
+  </div>
+<svg class="hills" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 62 C 90 58, 140 30, 230 34 S 380 66, 470 52 S 600 18, 700 26 S 860 60, 960 48 S 1110 30, 1200 40" stroke="#D9A441"/>
+  <path d="M0 72 C 120 70, 200 50, 320 56 S 520 76, 640 66 S 820 46, 940 58 S 1120 72, 1200 64" stroke="#B8532F" opacity=".7"/>
+</svg>
+</section>
+
+<section class="room host" id="host">
+  <div class="wrap room-grid">
+    <div class="room-text">
+      <span class="room-word">host</span>
+      <h2>Bring your people. We'll set a long table and light the lanterns.</h2>
+      <p>Private dinners, the odd jazz night, and the house for small events. I can cook, or leave you to it.</p>
+      <ul class="offers">
+        <li><a href="table.html"><b>Private dinners</b><i>small groups</i></a></li>
+        <li><a href="table.html"><b>Jazz evenings</b><i>dates by newsletter</i></a></li>
+        <li><a href="contact.html?interest=events"><b>Event hire</b><i>with or without catering</i></a></li>
+      </ul>
+      <a class="room-more" href="table.html">Lunches, dinners &amp; evenings</a>
+    </div>
+    <div class="collage">
+      <figure class="snap main" style="--tilt:1.5deg;--ratio:4/3;width:92%">
+        <img src="images/house.jpg" alt="The stone house under its pergola, in morning sun" loading="lazy">
+        <figcaption>the front terrace, which we built ourselves</figcaption>
+      </figure>
+    </div>
+  </div>
+<svg class="hills" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 62 C 90 58, 140 30, 230 34 S 380 66, 470 52 S 600 18, 700 26 S 860 60, 960 48 S 1110 30, 1200 40" stroke="#4F6D7A"/>
+  <path d="M0 72 C 120 70, 200 50, 320 56 S 520 76, 640 66 S 820 46, 940 58 S 1120 72, 1200 64" stroke="#6B7345" opacity=".7"/>
+</svg>
+</section>
+
+<section class="room art sand flip" id="art">
+  <div class="wrap room-grid">
+    <div class="room-text">
+      <span class="room-word">art</span>
+      <h2>The paintings hang where we eat, and every one is for sale.</h2>
+      <p>I paint in the studio and out among the olives. Come and look, join a painting retreat, or stay for a residency. Artists sleep at an agriturismo nearby, work in my studio and come back here for dinner.</p>
+      <ul class="offers">
+        <li><a href="contact.html?interest=art"><b>Paintings</b><i>ask about any piece</i></a></li>
+        <li><a href="contact.html?interest=art"><b>Painting retreats</b><i>small groups</i></a></li>
+        <li class="later"><span><b>Artist residencies</b><i>coming soon</i></span></li>
+      </ul>
+      <a class="room-more" href="contact.html?interest=art">Ask me about the art</a>
+    </div>
+    <div class="collage">
+      <figure class="snap main" style="--tilt:-1deg">
+        <img src="images/studio.jpg" alt="The wooden studio with an easel and a portrait in progress" loading="lazy">
+        <figcaption>the studio</figcaption>
+      </figure>
+      <figure class="snap second" style="--ratio:4/3;width:52%">
+        <img src="images/painting-outdoors.jpg" alt="An easel set up on the path among the olive trees" loading="lazy">
+        <figcaption>painting on the path</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<section class="tight">
+<section class="note-section" id="story">
   <div class="wrap">
-    <p class="quote reveal">Come hungry, stay late, and leave with paint on your sleeve.</p>
-  </div>
-</section>
-
-<section class="panel">
-  <div class="wrap split flip">
-    <div class="reveal">
-      <p class="eyebrow">The studio</p>
-      <h2>Paintings you can see, and take home.</h2>
-      <p>My studio is part of the house. The paintings hang where we eat, and every one is for sale. Ask me about any piece you like.</p>
-      <p>I also host painting retreats and artist residencies. Artists stay at an agriturismo nearby, work in the studio during the day and come back here for dinner.</p>
-      <div class="btn-row"><a class="btn ghost" href="contact.html?interest=art">Ask about paintings or residencies</a></div>
+    <div class="letter">
+      <p class="eyebrow">how it started</p>
+      <p>We've spent four years building Montecorboli by hand: one wall, one bed and one plant at a time. Painting, cooking and looking after people are what I've always done for a living, and this is where they finally share a roof.</p>
+      <p>It's ready enough to start, and it will keep growing. If you like walking, books and a long dinner, I think you'll like it here.</p>
+      <p class="sign">See you at the table.</p>
+      <a class="btn" href="contact.html">Write to me</a>
     </div>
-    <figure class="photo tall reveal" style="margin:0">
-      <img src="images/studio.jpg" alt="The wooden studio with an easel, brushes and a portrait in progress" loading="lazy">
-    </figure>
-  </div>
-</section>
-
-<section class="cta">
-  <div class="wrap">
-    <h2>Pull up a chair.</h2>
-    <p>Tell me what you have in mind: a dinner, a stay, a lunch stop for your group. I'll write back personally.</p>
-    <div class="btn-row"><a class="btn" href="contact.html">Make an enquiry</a></div>
   </div>
 </section>
 </main>

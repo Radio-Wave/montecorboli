@@ -43,8 +43,9 @@ h1, h2, h3, h4 {
   font-family: var(--serif);
   font-weight: 400;
   font-optical-sizing: auto;
-  line-height: 1.08;
-  letter-spacing: -0.01em;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  font-variation-settings: "SOFT" 100, "WONK" 1;
   margin: 0 0 0.5em;
 }
 
@@ -61,13 +62,13 @@ p { margin: 0 0 1.1em; max-width: 62ch; }
 }
 
 .eyebrow {
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+  text-transform: lowercase;
   color: var(--olive);
-  margin-bottom: 1.2em;
+  margin-bottom: 0.8em;
 }
 
 .lede { font-size: 1.2rem; color: var(--brown-soft); }
@@ -139,7 +140,8 @@ em.accent { font-style: italic; color: var(--terracotta); }
   font-weight: 500;
   text-decoration: none;
   padding: 14px 26px;
-  border-radius: 999px;
+  /* slightly uneven, hand-cut corners */
+  border-radius: 255px 18px 225px 18px / 18px 225px 18px 255px;
   border: 1px solid var(--terracotta);
   background: var(--terracotta);
   color: var(--cream);
@@ -564,4 +566,317 @@ figcaption {
   overflow: hidden;
   clip: rect(0 0 0 0);
   white-space: nowrap;
+}
+
+/* =========================================================
+   Hand-made layer: paper grain, hills, collage photos
+   ========================================================= */
+
+/* Faint paper grain over everything */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.09;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.17 0 0 0 0 0.13 0 0 0 0 0.09 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- Home: opening ---------- */
+
+.home-top { padding: clamp(28px, 5vw, 56px) 0 0; }
+
+.home-top .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px 32px;
+  margin-bottom: clamp(20px, 3vw, 32px);
+}
+
+.wordmark {
+  font-size: clamp(2.6rem, 8.5vw, 7.2rem);
+  font-weight: 350;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.home-top .note {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+  color: var(--brown-soft);
+  max-width: 26ch;
+  margin: 0 0 0.4em;
+}
+
+/* The four blocks + photo */
+.four {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: repeat(2, minmax(220px, 34vh));
+  gap: 0;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(16px, 2vw, 26px);
+  text-decoration: none;
+  color: var(--cream);
+  overflow: hidden;
+}
+.block .word {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  font-weight: 400;
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  transition: transform 0.35s ease;
+  transform-origin: left bottom;
+}
+.block small {
+  font-size: 0.88rem;
+  line-height: 1.4;
+  opacity: 0.9;
+  max-width: 20ch;
+}
+.block:hover .word { transform: rotate(-3deg) translateY(-2px); }
+
+.block.eat  { background: var(--terracotta); }
+.block.stay { background: var(--olive); }
+.block.host { background: var(--ochre); color: var(--brown); }
+.block.art  { background: var(--slate); }
+
+.four-photo {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+.four-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
+.four-photo figcaption {
+  position: absolute;
+  left: 18px;
+  bottom: 14px;
+  margin: 0;
+  color: var(--cream);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1rem;
+  text-shadow: 0 1px 8px rgba(43,33,24,0.6);
+}
+
+/* ---------- Hand-drawn hills divider ---------- */
+
+.hills {
+  display: block;
+  width: 100%;
+  height: clamp(40px, 6vw, 80px);
+  margin-top: clamp(40px, 6vw, 72px);
+}
+.hills path {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+/* ---------- The four rooms ---------- */
+
+.room { padding: clamp(40px, 7vw, 96px) 0 clamp(56px, 8vw, 110px); position: relative; }
+.room.sand { background: var(--sand); }
+
+.room-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(32px, 6vw, 96px);
+  align-items: center;
+}
+.room.flip .room-grid > .room-text { order: 2; }
+
+.room-word {
+  display: block;
+  font-family: var(--serif);
+  font-size: clamp(5rem, 15vw, 12rem);
+  font-weight: 350;
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+  margin: 0 0 0.12em -0.04em;
+}
+.eat  .room-word { color: var(--terracotta); }
+.stay .room-word { color: var(--olive); }
+.host .room-word { color: var(--ochre); }
+.art  .room-word { color: var(--slate); }
+
+.room h2 {
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  font-style: italic;
+  max-width: 22ch;
+}
+
+.offers {
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  max-width: 520px;
+}
+.offers li { border-bottom: 1px solid var(--line); }
+.offers a, .offers span {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 2px;
+  text-decoration: none;
+}
+.offers b {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+}
+.offers i { font-style: normal; font-size: 0.88rem; color: var(--brown-soft); text-align: right; }
+.offers a:hover b { color: var(--terracotta); }
+.offers a::after { content: "\2192"; color: var(--terracotta); margin-left: 4px; }
+.offers .later i { color: var(--ochre); }
+
+.room-more {
+  display: inline-block;
+  margin-top: 26px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  text-decoration: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8' preserveAspectRatio='none'%3E%3Cpath d='M1 5 C 20 1, 35 8, 55 4 S 95 2, 119 5' fill='none' stroke='%23B8532F' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 8px;
+  background-position: 0 100%;
+  padding-bottom: 8px;
+}
+
+/* Collage: photos laid down by hand */
+.collage { position: relative; min-height: 420px; }
+.snap {
+  position: relative;
+  margin: 0;
+  background: #FBF7F0;
+  padding: 10px 10px 12px;
+  box-shadow: 0 1px 2px rgba(43,33,24,0.12), 0 10px 24px -12px rgba(43,33,24,0.35);
+  transform: rotate(var(--tilt, -1.5deg));
+  transition: transform 0.4s ease;
+}
+.snap:hover { transform: rotate(0deg) scale(1.01); }
+.snap img { width: 100%; aspect-ratio: var(--ratio, 4 / 5); object-fit: cover; }
+.snap figcaption {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.98rem;
+  color: var(--brown-soft);
+  margin: 8px 2px 0;
+}
+.snap.main { width: 82%; }
+.snap.second {
+  position: absolute;
+  width: 46%;
+  right: 0;
+  bottom: -36px;
+  --tilt: 3deg;
+  --ratio: 1 / 1;
+}
+/* a scrap of colour behind the photos */
+.collage::before {
+  content: "";
+  position: absolute;
+  width: 58%;
+  height: 62%;
+  left: 30%;
+  top: -18px;
+  border-radius: 46% 54% 38% 62% / 55% 40% 60% 45%;
+  opacity: 0.85;
+}
+.eat  .collage::before { background: var(--terracotta); }
+.stay .collage::before { background: var(--olive); }
+.host .collage::before { background: var(--ochre); }
+.art  .collage::before { background: var(--slate); }
+
+/* ---------- Note (story + enquire) ---------- */
+
+.note-section { padding: clamp(64px, 9vw, 120px) 0; }
+.letter {
+  max-width: 640px;
+  margin: 0 auto;
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  line-height: 1.5;
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+}
+.letter p { max-width: none; }
+.letter .sign {
+  font-style: italic;
+  color: var(--terracotta);
+  margin-top: 1.2em;
+}
+.letter .btn { font-size: 1rem; margin-top: 12px; }
+
+@media (max-width: 860px) {
+  .four {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, minmax(150px, 24vh)) minmax(240px, 46vh);
+  }
+  .four-photo { grid-column: 1 / -1; grid-row: 3; }
+  .room-grid { grid-template-columns: 1fr; }
+  .room.flip .room-grid > .room-text { order: 0; }
+  .collage { min-height: 0; padding-bottom: 40px; }
+}
+
+/* A menu card laid on the table, used in the Eat collage */
+.menu-card {
+  --tilt: 2deg;
+  width: 78%;
+  margin-left: auto;
+  padding: 34px 30px 30px;
+  text-align: center;
+  font-family: var(--serif);
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+}
+.menu-card h4 { font-size: 1.5rem; font-style: italic; margin-bottom: 4px; }
+.menu-card .date { font-size: 0.85rem; color: var(--brown-soft); margin: 0 auto 18px; }
+.menu-card p { margin: 0 auto 12px; font-size: 1.05rem; line-height: 1.35; max-width: 26ch; }
+.menu-card p small {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--olive);
+  margin-bottom: 2px;
+}
+.menu-card .flourish { color: var(--terracotta); font-size: 1.2rem; margin: 6px 0 14px; }
+.eat .collage .snap.second { --ratio: 4 / 5; width: 44%; left: 0; right: auto; bottom: -48px; --tilt: -4deg; }
+.menu-card { z-index: 2; }
+.eat .collage .snap.second { z-index: 1; bottom: -70px; left: -8px; width: 40%; }
+/* hills sit right on the boundary between sections */
+.room:has(.hills), .home-top { padding-bottom: 6px; }
+.room .hills { margin-top: clamp(64px, 9vw, 120px); }
+@media (max-width: 520px) {
+  .offers a, .offers span { flex-wrap: wrap; row-gap: 0; }
+  .offers b { flex: 1 1 80%; }
+  .offers i { order: 3; flex-basis: 100%; text-align: left; }
+  .menu-card { width: 88%; }
+  .eat .collage .snap.second { width: 46%; bottom: -40px; }
 }
