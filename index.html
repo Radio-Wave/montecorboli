@@ -17,19 +17,19 @@
 <body>
 <header class="site-header">
   <div class="wrap">
-    <a class="logo" href="index.html">Montecorboli</a>
+    <a class="logo" href="#top">Montecorboli</a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
     <ul class="nav" id="nav">
-      <li><a href="private-chef.html">Private Chef</a></li>
-      <li><a href="table.html">Lunches &amp; Dinners</a></li>
-      <li><a href="stay.html">Stay</a></li>
-      <li><a href="art.html">Art</a></li>
-      <li><a href="index.html#story">Our Story</a></li>
-      <li><a class="btn" href="contact.html">Enquire</a></li>
+      <li><a href="#eat">Eat</a></li>
+      <li><a href="#stay">Stay</a></li>
+      <li><a href="#host">Host</a></li>
+      <li><a href="#art">Art</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a class="btn" href="#enquire">Enquire</a></li>
     </ul>
   </div>
 </header>
-<main>
+<main id="top">
 <section class="carousel" aria-roledescription="carousel" aria-label="Montecorboli in pictures">
   <div class="wrap">
     <div class="frame">
@@ -58,7 +58,6 @@
       <span class="tilde" aria-hidden="true"></span>
       <p>Montecorboli is our home in Tuscany, and we built it by hand. For the last four years I have been getting it ready for guests.</p>
       <p>Painting, cooking and hosting are what I'm good at and what I've made a living from. Here they're all in one place. It's ready enough to start, and it will keep growing.</p>
-      <a class="btn" href="contact.html">Get in touch</a>
     </div>
   </div>
 </section>
@@ -71,14 +70,9 @@
     <div class="course-text">
       <h2>Eat</h2>
       <p>I cook for guests at agriturismos nearby, and at our own table.</p>
-      <span class="tilde" aria-hidden="true"></span>
-      <ul class="dishes">
-        <li><a href="private-chef.html"><b>Private chef</b><i>at your agriturismo</i></a></li>
-        <li><a href="table.html"><b>Lunch for tour groups</b><i>cycling &amp; walking</i></a></li>
-        <li><a href="table.html"><b>Private dinners</b><i>small groups</i></a></li>
-        <li><a href="contact.html?interest=chef"><b>Menus</b><i>coming soon, ask me for the current one</i></a></li>
-      </ul>
-      <a class="course-more" href="private-chef.html">About the private chef service</a>
+      <p>If you're staying at an agriturismo nearby, I can come and cook for you as your private chef. Tell me where you're staying and I'll let you know if I can come to you.</p>
+      <p>Or come to Montecorboli: I make lunch for organised cycling and walking tours, and small private dinners for groups.</p>
+      <p>My menus will be here shortly. In the meantime, <a href="#enquire">ask me</a> and I'll send you the current one.</p>
     </div>
   </section>
 
@@ -89,12 +83,8 @@
     <div class="course-text">
       <h2>Stay</h2>
       <p>For people who love the outdoors, art, books and good food.</p>
-      <span class="tilde" aria-hidden="true"></span>
-      <ul class="dishes">
-        <li><a href="stay.html"><b>B&amp;B</b><i>two double rooms</i></a></li>
-        <li><a href="stay.html"><b>The whole house</b><i>one or two months a year</i></a></li>
-      </ul>
-      <a class="course-more" href="stay.html">About staying here</a>
+      <p>We have two spare double bedrooms for B&amp;B guests. For one or two months a year, you can rent the whole house as a holiday rental.</p>
+      <p><a href="#enquire">Ask me about dates.</a></p>
     </div>
   </section>
 
@@ -104,14 +94,9 @@
     </figure>
     <div class="course-text">
       <h2>Host</h2>
-      <p>Bring your group to Montecorboli. Small private dinners, and possibly jazz evenings. The house can also be hired for events, either hands-off or with me catering. A covered outdoor area is planned.</p>
-      <span class="tilde" aria-hidden="true"></span>
-      <ul class="dishes">
-        <li><a href="table.html"><b>Private dinners</b><i>small groups</i></a></li>
-        <li><a href="contact.html?interest=events"><b>Event hire</b><i>with or without catering</i></a></li>
-        <li class="later"><span><b>Jazz evenings</b><i>planned</i></span></li>
-      </ul>
-      <a class="course-more" href="table.html">Lunches, dinners &amp; evenings</a>
+      <p>Bring your group to Montecorboli. Small private dinners, and possibly jazz evenings: sign up to the newsletter below to hear about them.</p>
+      <p>The house can also be hired for events, either hands-off or with me catering. A covered outdoor area is planned.</p>
+      <p><a href="#enquire">Ask me about it.</a></p>
     </div>
   </section>
 
@@ -121,33 +106,86 @@
     </figure>
     <div class="course-text">
       <h2>Art</h2>
-      <p>Paintings can be seen and bought here. I also run painting retreats. For residencies, artists stay at an agriturismo nearby that I organise. They work and clean their brushes in the studio here, then have dinner and unwind at Montecorboli.</p>
-      <span class="tilde" aria-hidden="true"></span>
-      <ul class="dishes">
-        <li><a href="art.html"><b>Paintings</b><i>see the gallery</i></a></li>
-        <li><a href="art.html#enquire"><b>Painting retreats</b><i>get in touch</i></a></li>
-        <li class="later"><span><b>Artist residencies</b><i>coming soon</i></span></li>
-      </ul>
-      <a class="course-more" href="art.html">See the paintings</a>
+      <p>Paintings can be seen and bought here.</p>
+      <p>I also run painting retreats. For residencies, which are coming soon, artists stay at an agriturismo nearby that I organise. They work and clean their brushes in the studio here, then have dinner and unwind at Montecorboli.</p>
     </div>
   </section>
+
+  <div class="gallery-wrap">
+    <p class="eyebrow">paintings</p>
+    <!-- ADD PAINTINGS HERE. One <article class="painting"> per painting:
+    <article class="painting">
+      <figure class="painting-img"><img src="images/paintings/your-file.jpg" alt="Short description of the painting" loading="lazy"></figure>
+      <h3>Title of the painting</h3>
+      <p class="painting-info">Oil on canvas · 50 × 70 cm · 2025</p>
+      <p class="painting-price">€ 000</p>          (or "Sold", or "Price on request")
+      <a class="painting-ask" href="#enquire" data-painting="Title of the painting">Ask about this painting</a>
+    </article>
+    The data-painting value is copied into the enquiry message when someone clicks "Ask". -->
+    <div class="gallery">
+        <article class="painting">
+          <div class="painting-img todo">photo to come</div>
+          <h3>Painting title</h3>
+          <p class="painting-info">Medium · size · year</p>
+          <p class="painting-price">Price</p>
+          <a class="painting-ask" href="#enquire" data-painting="Painting title">Ask about this painting</a>
+        </article>
+        <article class="painting">
+          <div class="painting-img todo">photo to come</div>
+          <h3>Painting title</h3>
+          <p class="painting-info">Medium · size · year</p>
+          <p class="painting-price">Price</p>
+          <a class="painting-ask" href="#enquire" data-painting="Painting title">Ask about this painting</a>
+        </article>
+        <article class="painting">
+          <div class="painting-img todo">photo to come</div>
+          <h3>Painting title</h3>
+          <p class="painting-info">Medium · size · year</p>
+          <p class="painting-price">Price</p>
+          <a class="painting-ask" href="#enquire" data-painting="Painting title">Ask about this painting</a>
+        </article>
+    </div>
+  </div>
 </div>
+
+<section class="panel" id="enquire">
+  <div class="wrap">
+    <p class="eyebrow">enquire</p>
+    <h2>Say hello.</h2>
+    <p>Tell me what you're interested in and I'll get back to you.</p>
+    <div class="enquire">
+      <form class="form" data-enquiry>
+        <input type="hidden" name="_subject" value="Enquiry from the website">
+        <div class="full"><label for="e-name">Your name</label><input id="e-name" name="name" required autocomplete="name"></div>
+        <div class="full"><label for="e-email">Email</label><input id="e-email" type="email" name="email" required autocomplete="email"></div>
+        <div class="full"><label for="e-msg">Message</label><textarea id="e-msg" name="message" required placeholder="Dates, numbers, ideas: whatever you have so far."></textarea></div>
+        <div class="full"><button class="btn" type="submit">Send</button></div>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+      <aside class="write-direct">
+        <p class="eyebrow">or write to me directly</p>
+        <span class="tilde" aria-hidden="true"></span>
+        <a class="host-email" data-host-email href="#enquire">email address coming soon</a>
+      </aside>
+    </div>
+  </div>
+</section>
 </main>
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <a class="logo" href="index.html">Montecorboli</a>
+        <a class="logo" href="#top">Montecorboli</a>
         <p>Food, art and hospitality in Tuscany.</p>
       </div>
       <div>
         <h4>Visit</h4>
         <ul>
-          <li><a href="private-chef.html">Private Chef</a></li>
-          <li><a href="table.html">Lunches, Dinners &amp; Evenings</a></li>
-          <li><a href="stay.html">Stay</a></li>
-          <li><a href="art.html">Art</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#eat">Eat</a></li>
+          <li><a href="#stay">Stay</a></li>
+          <li><a href="#host">Host</a></li>
+          <li><a href="#art">Art</a></li>
+          <li><a href="#enquire">Enquire</a></li>
         </ul>
       </div>
       <div>

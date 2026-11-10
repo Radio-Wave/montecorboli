@@ -16,6 +16,13 @@ if (toggle && nav) {
     toggle.setAttribute("aria-expanded", open);
     toggle.textContent = open ? "Close" : "Menu";
   });
+  nav.querySelectorAll("a").forEach((a) =>
+    a.addEventListener("click", () => {
+      nav.classList.remove("open");
+      toggle.setAttribute("aria-expanded", false);
+      toggle.textContent = "Menu";
+    })
+  );
 }
 
 // Gentle reveal on scroll
@@ -87,12 +94,6 @@ document.querySelectorAll("[data-host-email]").forEach((a) => {
     a.classList.add("pending");
   }
 });
-
-// Note where an enquiry came from, e.g. contact.html?interest=events
-const interest = new URLSearchParams(location.search).get("interest");
-if (interest) {
-  document.querySelectorAll('input[type=hidden][name="interest"]').forEach((i) => { if (!i.value) i.value = interest; });
-}
 
 // "Ask about this painting": start the message for them
 document.querySelectorAll("[data-painting]").forEach((a) =>
