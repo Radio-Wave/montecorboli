@@ -607,3 +607,65 @@ figcaption {
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+
+/* ---------- Enquiry: simple form + the host's email ---------- */
+
+.enquire {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 80px);
+  align-items: start;
+  max-width: 980px;
+}
+.enquire .form { grid-template-columns: 1fr; max-width: none; }
+.write-direct {
+  text-align: center;
+  border: 1px solid var(--rule);
+  padding: 32px 24px;
+  margin-top: 30px;
+}
+.write-direct .eyebrow { margin: 0; }
+.write-direct .tilde { margin: 6px 0 10px; }
+.host-email {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.host-email.pending { font-style: italic; color: var(--muted); text-decoration: none; pointer-events: none; }
+
+/* ---------- Art gallery ---------- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: clamp(32px, 4vw, 48px) clamp(20px, 3vw, 36px);
+}
+.painting { text-align: center; }
+.painting-img {
+  margin: 0 0 16px;
+  aspect-ratio: 4 / 5;
+  background: var(--paper-2);
+  overflow: hidden;
+}
+.painting-img img { width: 100%; height: 100%; object-fit: contain; }
+.painting-img.todo {
+  display: grid;
+  place-items: center;
+  border: 1px dashed var(--rule);
+  font-style: italic;
+  color: var(--muted);
+}
+.painting h3 { margin-bottom: 2px; }
+.painting-info { font-style: italic; color: var(--muted); margin: 0 auto 4px; }
+.painting-price {
+  font-family: var(--caps);
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  margin: 0 auto 8px;
+}
+.painting-ask { font-style: italic; color: var(--accent); }
+
+@media (max-width: 760px) {
+  .enquire { grid-template-columns: 1fr; }
+  .write-direct { margin-top: 0; }
+}

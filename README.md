@@ -10,12 +10,15 @@ Food, art and hospitality in Tuscany. Launch version of the website, built from 
 | Private Chef: menus, areas covered, enquiry form | `private-chef.html` |
 | Lunches, Dinners & Evenings: cyclists, walkers, private dinners, jazz | `table.html` |
 | Stay: B&B rooms and the whole house | `stay.html` |
-| Contact: short form asking what the person is interested in | `contact.html` |
+| Art: gallery of paintings (name, details, price), retreats and residencies | `art.html` |
+| Contact: name, email and message, with the host's email shown alongside | `contact.html` |
 
-To add later: Events, Residencies, Paintings gallery, Journal.
+To add later: Events, Residencies, Journal.
 
 ## Editing
 
+- **Host email:** set `HOST_EMAIL` near the top of `js/main.js`; it appears next to every enquiry form.
+- **Paintings:** in `art.html`, look for `ADD PAINTINGS HERE`, replace the placeholder cards, and put images in `images/paintings/`.
 - **Menus:** in `private-chef.html`, look for `ADD MENUS HERE` and follow the template.
 - **Photos:** put new images in `images/` and change the `src="images/…"` paths. Landscape photos work best for the home page hero.
 - **Colours & fonts:** all at the top of `css/style.css` (taken from the brief).

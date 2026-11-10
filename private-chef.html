@@ -23,6 +23,7 @@
       <li><a href="private-chef.html" aria-current="page">Private Chef</a></li>
       <li><a href="table.html">Lunches &amp; Dinners</a></li>
       <li><a href="stay.html">Stay</a></li>
+      <li><a href="art.html">Art</a></li>
       <li><a href="index.html#story">Our Story</a></li>
       <li><a class="btn" href="contact.html">Enquire</a></li>
     </ul>
@@ -78,18 +79,22 @@
   <div class="wrap">
     <p class="eyebrow">enquire</p>
     <h2>Ask about a date.</h2>
-    <form class="form" data-enquiry>
-      <input type="hidden" name="_subject" value="Private chef enquiry">
-      <input type="hidden" name="interest" value="chef">
-      <div><label for="pc-name">Your name</label><input id="pc-name" name="name" required autocomplete="name"></div>
-      <div><label for="pc-email">Email</label><input id="pc-email" type="email" name="email" required autocomplete="email"></div>
-      <div><label for="pc-date">Date</label><input id="pc-date" type="date" name="date"></div>
-      <div><label for="pc-guests">Number of guests</label><input id="pc-guests" type="number" name="guests" min="1" max="40"></div>
-      <div class="full"><label for="pc-where">Where are you staying?</label><input id="pc-where" name="staying_at" placeholder="Name of the agriturismo or house"></div>
-      <div class="full"><label for="pc-msg">Anything else?</label><textarea id="pc-msg" name="message" placeholder="Dietary needs, the occasion, questions…"></textarea></div>
-      <div class="full"><button class="btn" type="submit">Send enquiry</button></div>
-      <p class="form-status" aria-live="polite"></p>
-    </form>
+    <div class="enquire">
+      <form class="form" data-enquiry>
+        <input type="hidden" name="_subject" value="Private chef enquiry">
+        <input type="hidden" name="interest" value="chef">
+        <div class="full"><label for="pc-name">Your name</label><input id="pc-name" name="name" required autocomplete="name"></div>
+        <div class="full"><label for="pc-email">Email</label><input id="pc-email" type="email" name="email" required autocomplete="email"></div>
+        <div class="full"><label for="pc-msg">Message</label><textarea id="pc-msg" name="message" required placeholder="Your date, where you're staying, how many guests, any dietary needs…"></textarea></div>
+        <div class="full"><button class="btn" type="submit">Send</button></div>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+      <aside class="write-direct">
+        <p class="eyebrow">or write to me directly</p>
+        <span class="tilde" aria-hidden="true"></span>
+        <a class="host-email" data-host-email href="contact.html">email address coming soon</a>
+      </aside>
+    </div>
   </div>
 </section>
 </main>
@@ -106,6 +111,7 @@
           <li><a href="private-chef.html">Private Chef</a></li>
           <li><a href="table.html">Lunches, Dinners &amp; Evenings</a></li>
           <li><a href="stay.html">Stay</a></li>
+          <li><a href="art.html">Art</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>

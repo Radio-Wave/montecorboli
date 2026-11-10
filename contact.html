@@ -23,6 +23,7 @@
       <li><a href="private-chef.html">Private Chef</a></li>
       <li><a href="table.html">Lunches &amp; Dinners</a></li>
       <li><a href="stay.html">Stay</a></li>
+      <li><a href="art.html">Art</a></li>
       <li><a href="index.html#story">Our Story</a></li>
       <li><a class="btn" href="contact.html" aria-current="page">Enquire</a></li>
     </ul>
@@ -39,23 +40,22 @@
 
 <section class="panel">
   <div class="wrap">
-    <form class="form" data-enquiry>
-      <input type="hidden" name="_subject" value="General enquiry">
-      <fieldset class="checks full">
-        <legend>I'm interested in…</legend>
-        <label><input type="checkbox" name="interest" value="chef"> A private chef</label>
-        <label><input type="checkbox" name="interest" value="tour-lunch"> Lunch for a tour group</label>
-        <label><input type="checkbox" name="interest" value="dinner"> A private dinner or jazz evening</label>
-        <label><input type="checkbox" name="interest" value="stay"> Staying (B&amp;B or whole house)</label>
-        <label><input type="checkbox" name="interest" value="events"> Hiring the house for an event</label>
-        <label><input type="checkbox" name="interest" value="art"> Paintings, retreats or a residency</label>
-      </fieldset>
-      <div><label for="c-name">Your name</label><input id="c-name" name="name" required autocomplete="name"></div>
-      <div><label for="c-email">Email</label><input id="c-email" type="email" name="email" required autocomplete="email"></div>
-      <div class="full"><label for="c-msg">Your message</label><textarea id="c-msg" name="message" required placeholder="Dates, numbers, ideas: whatever you have so far."></textarea></div>
-      <div class="full"><button class="btn" type="submit">Send</button></div>
-      <p class="form-status" aria-live="polite"></p>
-    </form>
+    <div class="enquire">
+      <form class="form" data-enquiry>
+        <input type="hidden" name="_subject" value="General enquiry">
+        <input type="hidden" name="interest" value="">
+        <div class="full"><label for="c-name">Your name</label><input id="c-name" name="name" required autocomplete="name"></div>
+        <div class="full"><label for="c-email">Email</label><input id="c-email" type="email" name="email" required autocomplete="email"></div>
+        <div class="full"><label for="c-msg">Message</label><textarea id="c-msg" name="message" required placeholder="Dates, numbers, ideas: whatever you have so far."></textarea></div>
+        <div class="full"><button class="btn" type="submit">Send</button></div>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+      <aside class="write-direct">
+        <p class="eyebrow">or write to me directly</p>
+        <span class="tilde" aria-hidden="true"></span>
+        <a class="host-email" data-host-email href="contact.html">email address coming soon</a>
+      </aside>
+    </div>
   </div>
 </section>
 </main>
@@ -72,6 +72,7 @@
           <li><a href="private-chef.html">Private Chef</a></li>
           <li><a href="table.html">Lunches, Dinners &amp; Evenings</a></li>
           <li><a href="stay.html">Stay</a></li>
+          <li><a href="art.html">Art</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>

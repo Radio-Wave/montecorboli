@@ -23,6 +23,7 @@
       <li><a href="private-chef.html">Private Chef</a></li>
       <li><a href="table.html">Lunches &amp; Dinners</a></li>
       <li><a href="stay.html" aria-current="page">Stay</a></li>
+      <li><a href="art.html">Art</a></li>
       <li><a href="index.html#story">Our Story</a></li>
       <li><a class="btn" href="contact.html">Enquire</a></li>
     </ul>
@@ -77,24 +78,22 @@
   <div class="wrap">
     <p class="eyebrow">enquire</p>
     <h2>Check dates.</h2>
-    <form class="form" data-enquiry>
-      <input type="hidden" name="_subject" value="Stay enquiry">
-      <div><label for="s-name">Your name</label><input id="s-name" name="name" required autocomplete="name"></div>
-      <div><label for="s-email">Email</label><input id="s-email" type="email" name="email" required autocomplete="email"></div>
-      <div>
-        <label for="s-type">Which stay?</label>
-        <select id="s-type" name="interest">
-          <option value="bnb">B&amp;B room</option>
-          <option value="house">The whole house</option>
-        </select>
-      </div>
-      <div><label for="s-guests">Guests</label><input id="s-guests" type="number" name="guests" min="1" max="12"></div>
-      <div><label for="s-in">Arriving</label><input id="s-in" type="date" name="arrive"></div>
-      <div><label for="s-out">Leaving</label><input id="s-out" type="date" name="leave"></div>
-      <div class="full"><label for="s-msg">Anything else?</label><textarea id="s-msg" name="message"></textarea></div>
-      <div class="full"><button class="btn" type="submit">Send enquiry</button></div>
-      <p class="form-status" aria-live="polite"></p>
-    </form>
+    <div class="enquire">
+      <form class="form" data-enquiry>
+        <input type="hidden" name="_subject" value="Stay enquiry">
+        <input type="hidden" name="interest" value="stay">
+        <div class="full"><label for="s-name">Your name</label><input id="s-name" name="name" required autocomplete="name"></div>
+        <div class="full"><label for="s-email">Email</label><input id="s-email" type="email" name="email" required autocomplete="email"></div>
+        <div class="full"><label for="s-msg">Message</label><textarea id="s-msg" name="message" required placeholder="B&amp;B or the whole house, your dates and how many guests…"></textarea></div>
+        <div class="full"><button class="btn" type="submit">Send</button></div>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+      <aside class="write-direct">
+        <p class="eyebrow">or write to me directly</p>
+        <span class="tilde" aria-hidden="true"></span>
+        <a class="host-email" data-host-email href="contact.html">email address coming soon</a>
+      </aside>
+    </div>
   </div>
 </section>
 </main>
@@ -111,6 +110,7 @@
           <li><a href="private-chef.html">Private Chef</a></li>
           <li><a href="table.html">Lunches, Dinners &amp; Evenings</a></li>
           <li><a href="stay.html">Stay</a></li>
+          <li><a href="art.html">Art</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>

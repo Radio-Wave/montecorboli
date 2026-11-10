@@ -77,13 +77,33 @@ if (carousel) {
   start();
 }
 
-// Pre-tick an interest on the contact form, e.g. contact.html?interest=chef
-const params = new URLSearchParams(location.search);
-const interest = params.get("interest");
+// The host's email, shown next to every enquiry form. Fill this in once.
+const HOST_EMAIL = "";
+document.querySelectorAll("[data-host-email]").forEach((a) => {
+  if (HOST_EMAIL) {
+    a.href = "mailto:" + HOST_EMAIL;
+    a.textContent = HOST_EMAIL;
+  } else {
+    a.classList.add("pending");
+  }
+});
+
+// Note where an enquiry came from, e.g. contact.html?interest=events
+const interest = new URLSearchParams(location.search).get("interest");
 if (interest) {
-  const box = document.querySelector(`input[name="interest"][value="${CSS.escape(interest)}"]`);
-  if (box) box.checked = true;
+  document.querySelectorAll('input[type=hidden][name="interest"]').forEach((i) => { if (!i.value) i.value = interest; });
 }
+
+// "Ask about this painting": start the message for them
+document.querySelectorAll("[data-painting]").forEach((a) =>
+  a.addEventListener("click", () => {
+    const msg = document.querySelector("#enquire textarea[name=message]");
+    if (msg && !msg.value) msg.value = `I'm interested in "${a.dataset.painting}". `;
+    const subj = document.querySelector('#enquire input[name="_subject"]');
+    if (subj) subj.value = `Art enquiry: ${a.dataset.painting}`;
+    setTimeout(() => msg && msg.focus({ preventScroll: true }), 400);
+  })
+);
 
 // Footer year
 document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Art · Montecorboli</title>
+<meta name="description" content="Paintings to see and buy at Montecorboli, Tuscany, with painting retreats and residencies.">
+<meta property="og:title" content="Art · Montecorboli">
+<meta property="og:description" content="Paintings to see and buy at Montecorboli, Tuscany, with painting retreats and residencies.">
+<meta property="og:image" content="images/studio.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">Montecorboli</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <ul class="nav" id="nav">
+      <li><a href="private-chef.html">Private Chef</a></li>
+      <li><a href="table.html">Lunches &amp; Dinners</a></li>
+      <li><a href="stay.html">Stay</a></li>
+      <li><a href="art.html" aria-current="page">Art</a></li>
+      <li><a href="index.html#story">Our Story</a></li>
+      <li><a class="btn" href="contact.html">Enquire</a></li>
+    </ul>
+  </div>
+</header>
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">art</p>
+    <h1>Paintings.</h1>
+    <p class="lede">Paintings can be seen and bought here.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <!-- ADD PAINTINGS HERE. One <article class="painting"> per painting:
+    <article class="painting">
+      <figure class="painting-img"><img src="images/paintings/your-file.jpg" alt="Short description of the painting" loading="lazy"></figure>
+      <h3>Title of the painting</h3>
+      <p class="painting-info">Oil on canvas · 50 × 70 cm · 2025</p>
+      <p class="painting-price">€ 000</p>          (or "Sold", or "Price on request")
+      <a class="painting-ask" href="#enquire" data-painting="Title of the painting">Ask about this painting</a>
+    </article>
+    The data-painting value is copied into the enquiry message when someone clicks "Ask". -->
+    <div class="gallery">
+      <article class="painting">
+        <div class="painting-img todo">photo to come</div>
+        <h3>Painting title</h3>
+        <p class="painting-info">Medium · size · year</p>
+        <p class="painting-price">Price</p>
+        <a class="painting-ask" href="#enquire" data-painting="Painting title">Ask about this painting</a>
+      </article>
+      <article class="painting">
+        <div class="painting-img todo">photo to come</div>
+        <h3>Painting title</h3>
+        <p class="painting-info">Medium · size · year</p>
+        <p class="painting-price">Price</p>
+        <a class="painting-ask" href="#enquire" data-painting="Painting title">Ask about this painting</a>
+      </article>
+      <article class="painting">
+        <div class="painting-img todo">photo to come</div>
+        <h3>Painting title</h3>
+        <p class="painting-info">Medium · size · year</p>
+        <p class="painting-price">Price</p>
+        <a class="painting-ask" href="#enquire" data-painting="Painting title">Ask about this painting</a>
+      </article>
+      <article class="painting">
+        <div class="painting-img todo">photo to come</div>
+        <h3>Painting title</h3>
+        <p class="painting-info">Medium · size · year</p>
+        <p class="painting-price">Price</p>
+        <a class="painting-ask" href="#enquire" data-painting="Painting title">Ask about this painting</a>
+      </article>
+      <article class="painting">
+        <div class="painting-img todo">photo to come</div>
+        <h3>Painting title</h3>
+        <p class="painting-info">Medium · size · year</p>
+        <p class="painting-price">Price</p>
+        <a class="painting-ask" href="#enquire" data-painting="Painting title">Ask about this painting</a>
+      </article>
+      <article class="painting">
+        <div class="painting-img todo">photo to come</div>
+        <h3>Painting title</h3>
+        <p class="painting-info">Medium · size · year</p>
+        <p class="painting-price">Price</p>
+        <a class="painting-ask" href="#enquire" data-painting="Painting title">Ask about this painting</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="wrap split">
+    <figure class="photo wide" style="margin:0">
+      <img src="images/painting-outdoors.jpg" alt="An easel set up on the path among the trees" loading="lazy">
+    </figure>
+    <div>
+      <p class="eyebrow">retreats &amp; residencies</p>
+      <h2>Painting at Montecorboli.</h2>
+      <p>I also run painting retreats. For residencies, artists stay at an agriturismo nearby that I organise. They work and clean their brushes in the studio here, then have dinner and unwind at Montecorboli.</p>
+      <ul class="ticks">
+        <li>Painting retreats: get in touch</li>
+        <li>Artist residencies: coming soon</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="enquire">
+  <div class="wrap">
+    <p class="eyebrow">enquire</p>
+    <h2>Ask about a painting.</h2>
+    <div class="enquire">
+      <form class="form" data-enquiry>
+        <input type="hidden" name="_subject" value="Art enquiry">
+        <input type="hidden" name="interest" value="art">
+        <div class="full"><label for="a-name">Your name</label><input id="a-name" name="name" required autocomplete="name"></div>
+        <div class="full"><label for="a-email">Email</label><input id="a-email" type="email" name="email" required autocomplete="email"></div>
+        <div class="full"><label for="a-msg">Message</label><textarea id="a-msg" name="message" required placeholder="Which painting, or a question about retreats and residencies…"></textarea></div>
+        <div class="full"><button class="btn" type="submit">Send</button></div>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+      <aside class="write-direct">
+        <p class="eyebrow">or write to me directly</p>
+        <span class="tilde" aria-hidden="true"></span>
+        <a class="host-email" data-host-email href="contact.html">email address coming soon</a>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html">Montecorboli</a>
+        <p>Food, art and hospitality in Tuscany.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="private-chef.html">Private Chef</a></li>
+          <li><a href="table.html">Lunches, Dinners &amp; Evenings</a></li>
+          <li><a href="stay.html">Stay</a></li>
+          <li><a href="art.html">Art</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Letters from the hill</h4>
+        <p>News, dates and new paintings.</p>
+        <form data-newsletter>
+          <div class="newsletter">
+            <label class="visually-hidden" for="nl-email">Email</label>
+            <input id="nl-email" type="email" name="email" placeholder="Your email" required>
+            <input type="hidden" name="_subject" value="Newsletter sign-up">
+            <button class="btn" type="submit">Sign up</button>
+          </div>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>&copy; <span data-year>2026</span> Montecorboli, Tuscany</span>
+      <span>English · <span title="Coming later">Italiano presto</span></span>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

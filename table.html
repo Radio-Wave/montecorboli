@@ -23,6 +23,7 @@
       <li><a href="private-chef.html">Private Chef</a></li>
       <li><a href="table.html" aria-current="page">Lunches &amp; Dinners</a></li>
       <li><a href="stay.html">Stay</a></li>
+      <li><a href="art.html">Art</a></li>
       <li><a href="index.html#story">Our Story</a></li>
       <li><a class="btn" href="contact.html">Enquire</a></li>
     </ul>
@@ -94,25 +95,22 @@
   <div class="wrap">
     <p class="eyebrow">enquire</p>
     <h2>Make an enquiry.</h2>
-    <form class="form" data-enquiry>
-      <input type="hidden" name="_subject" value="Lunch / dinner enquiry">
-      <div><label for="t-name">Your name</label><input id="t-name" name="name" required autocomplete="name"></div>
-      <div><label for="t-email">Email</label><input id="t-email" type="email" name="email" required autocomplete="email"></div>
-      <div>
-        <label for="t-type">What would you like?</label>
-        <select id="t-type" name="interest">
-          <option value="tour-lunch">Lunch for a cycling or walking tour</option>
-          <option value="dinner">A private dinner</option>
-          <option value="jazz">A jazz evening</option>
-          <option value="events">An event</option>
-        </select>
-      </div>
-      <div><label for="t-guests">Number of guests</label><input id="t-guests" type="number" name="guests" min="1" max="80"></div>
-      <div class="full"><label for="t-date">Date(s)</label><input id="t-date" name="dates" placeholder="A date, or a rough time of year"></div>
-      <div class="full"><label for="t-msg">Tell me a bit more</label><textarea id="t-msg" name="message"></textarea></div>
-      <div class="full"><button class="btn" type="submit">Send enquiry</button></div>
-      <p class="form-status" aria-live="polite"></p>
-    </form>
+    <div class="enquire">
+      <form class="form" data-enquiry>
+        <input type="hidden" name="_subject" value="Lunch / dinner enquiry">
+        <input type="hidden" name="interest" value="">
+        <div class="full"><label for="t-name">Your name</label><input id="t-name" name="name" required autocomplete="name"></div>
+        <div class="full"><label for="t-email">Email</label><input id="t-email" type="email" name="email" required autocomplete="email"></div>
+        <div class="full"><label for="t-msg">Message</label><textarea id="t-msg" name="message" required placeholder="What you'd like, the date and how many guests…"></textarea></div>
+        <div class="full"><button class="btn" type="submit">Send</button></div>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+      <aside class="write-direct">
+        <p class="eyebrow">or write to me directly</p>
+        <span class="tilde" aria-hidden="true"></span>
+        <a class="host-email" data-host-email href="contact.html">email address coming soon</a>
+      </aside>
+    </div>
   </div>
 </section>
 </main>
@@ -129,6 +127,7 @@
           <li><a href="private-chef.html">Private Chef</a></li>
           <li><a href="table.html">Lunches, Dinners &amp; Evenings</a></li>
           <li><a href="stay.html">Stay</a></li>
+          <li><a href="art.html">Art</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
