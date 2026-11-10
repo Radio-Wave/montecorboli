@@ -28,6 +28,55 @@ const io = "IntersectionObserver" in window
   : null;
 document.querySelectorAll(".reveal").forEach((el) => (io ? io.observe(el) : el.classList.add("in")));
 
+// Home carousel: slow crossfade, pauses on hover/focus, arrows, dots, keyboard
+const carousel = document.querySelector(".carousel");
+if (carousel) {
+  const slides = [...carousel.querySelectorAll(".slide")];
+  const caption = carousel.querySelector(".carousel-caption");
+  const dotsBox = carousel.querySelector(".dots");
+  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let i = 0, timer = null;
+
+  const dots = slides.map((s, n) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("aria-label", `Picture ${n + 1} of ${slides.length}`);
+    b.addEventListener("click", () => { show(n); restart(); });
+    dotsBox.appendChild(b);
+    return b;
+  });
+
+  function show(n) {
+    i = (n + slides.length) % slides.length;
+    slides.forEach((s, k) => {
+      s.classList.toggle("on", k === i);
+      s.setAttribute("aria-hidden", k !== i);
+      if (k === i) { const img = s.querySelector("img"); if (img) img.loading = "eager"; }
+    });
+    dots.forEach((d, k) => d.setAttribute("aria-current", k === i));
+    const cap = slides[i].querySelector("figcaption");
+    if (caption && cap) caption.textContent = cap.textContent;
+  }
+  const stop = () => { clearInterval(timer); timer = null; };
+  const start = () => { if (!still && !timer) timer = setInterval(() => show(i + 1), 6000); };
+  const restart = () => { stop(); start(); };
+
+  carousel.querySelector("[data-prev]").addEventListener("click", () => { show(i - 1); restart(); });
+  carousel.querySelector("[data-next]").addEventListener("click", () => { show(i + 1); restart(); });
+  carousel.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") { show(i - 1); restart(); }
+    if (e.key === "ArrowRight") { show(i + 1); restart(); }
+  });
+  carousel.addEventListener("mouseenter", stop);
+  carousel.addEventListener("mouseleave", start);
+  carousel.addEventListener("focusin", stop);
+  carousel.addEventListener("focusout", start);
+  document.addEventListener("visibilitychange", () => (document.hidden ? stop() : start()));
+
+  show(0);
+  start();
+}
+
 // Pre-tick an interest on the contact form, e.g. contact.html?interest=chef
 const params = new URLSearchParams(location.search);
 const interest = params.get("interest");

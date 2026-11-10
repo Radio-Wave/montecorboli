@@ -6,7 +6,7 @@ Food, art and hospitality in Tuscany. Launch version of the website, built from 
 
 | Page | File |
 |---|---|
-| Home: the view, the story, four paths in (Eat, Stay, Host, Art) | `index.html` |
+| Home: photo carousel, a note from the host, then Eat, Stay, Host, Art set like courses on a menu | `index.html` |
 | Private Chef: menus, areas covered, enquiry form | `private-chef.html` |
 | Lunches, Dinners & Evenings: cyclists, walkers, private dinners, jazz | `table.html` |
 | Stay: B&B rooms and the whole house | `stay.html` |

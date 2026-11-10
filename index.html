@@ -11,13 +11,13 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="site-header">
   <div class="wrap">
-    <a class="logo" href="index.html">Montecorboli<span>.</span></a>
+    <a class="logo" href="index.html">Montecorboli</a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
     <ul class="nav" id="nav">
       <li><a href="private-chef.html">Private Chef</a></li>
@@ -29,130 +29,108 @@
   </div>
 </header>
 <main>
-<section class="home-top">
+<section class="carousel" aria-roledescription="carousel" aria-label="Montecorboli in pictures">
   <div class="wrap">
-    <h1 class="wordmark">Montecorboli</h1>
-    <p class="note">painting, cooking and hosting, in our home in Tuscany</p>
-  </div>
-  <nav class="four" aria-label="Four ways in">
-    <a class="block eat" href="#eat"><span class="word">eat</span><small>private chef, lunches, dinners</small></a>
-    <a class="block stay" href="#stay"><span class="word">stay</span><small>B&amp;B rooms, the whole house</small></a>
-    <a class="block host" href="#host"><span class="word">host</span><small>dinners, events, evenings</small></a>
-    <a class="block art" href="#art"><span class="word">art</span><small>paintings, retreats, residencies</small></a>
-    <figure class="four-photo">
-      <img src="images/terrace-dinner.jpg" alt="A table laid for dinner under the glass pergola, with the hills beyond">
-    </figure>
-  </nav>
-</section>
-
-<section class="room eat" id="eat">
-  <div class="wrap room-grid">
-    <div class="room-text">
-      <span class="room-word">eat</span>
-      <h2>I cook for guests at agriturismos nearby, and at our own table.</h2>
-      <p>Book me as a private chef where you're staying, or come to Montecorboli for lunch or a small private dinner.</p>
-      <ul class="offers">
-        <li><a href="private-chef.html"><b>Private chef</b><i>at your agriturismo</i></a></li>
-        <li><a href="table.html"><b>Lunch for tour groups</b><i>cycling &amp; walking</i></a></li>
-        <li><a href="table.html"><b>Private dinners</b><i>small groups</i></a></li>
-      </ul>
-      <a class="room-more" href="private-chef.html">About the private chef service</a>
+    <div class="frame">
+      <figure class="slide on"><img src="images/house.jpg" alt="The stone house under its pergola, in morning sun"><figcaption class="visually-hidden">the front terrace</figcaption></figure>
+      <figure class="slide"><img src="images/terrace-dinner.jpg" alt="A table laid for dinner under the glass pergola, with the hills beyond" style="object-position:center 62%"><figcaption class="visually-hidden">dinner under the pergola</figcaption></figure>
+      <figure class="slide"><img src="images/sitting-room.jpg" alt="Evening sun on the fireplace in the sitting room" loading="lazy"><figcaption class="visually-hidden">the sitting room</figcaption></figure>
+      <figure class="slide"><img src="images/studio.jpg" alt="The studio, with an easel and a painting in progress" loading="lazy" style="object-position:center 40%"><figcaption class="visually-hidden">the studio</figcaption></figure>
+      <figure class="slide"><img src="images/pond.jpg" alt="The stone lily pond in the garden" loading="lazy"><figcaption class="visually-hidden">the garden</figcaption></figure>
+      <figure class="slide"><img src="images/painting-outdoors.jpg" alt="An easel set up on the path among the trees" loading="lazy"><figcaption class="visually-hidden">painting outdoors</figcaption></figure>
     </div>
-    <div class="collage">
-      <div class="snap menu-card">
-        <h4>Menus</h4>
-        <p class="date">coming soon</p>
-        <p>My menus will be here shortly.</p>
-        <p><a href="contact.html?interest=chef">Ask me for the current menu</a></p>
-        <div class="flourish">~</div>
+    <div class="carousel-bar">
+      <p class="carousel-caption" aria-live="polite">the front terrace</p>
+      <div class="carousel-controls">
+        <button type="button" data-prev aria-label="Previous picture">&larr;</button>
+        <div class="dots"></div>
+        <button type="button" data-next aria-label="Next picture">&rarr;</button>
       </div>
-      <figure class="snap second">
-        <img src="images/pond.jpg" alt="The stone lily pond in the garden" loading="lazy" style="object-position:30% center">
-        <figcaption>the garden</figcaption>
-      </figure>
     </div>
   </div>
 </section>
 
-<section class="room stay sand flip" id="stay">
-  <div class="wrap room-grid">
-    <div class="room-text">
-      <span class="room-word">stay</span>
-      <h2>For people who love the outdoors, art, books and good food.</h2>
-      <p>We have two spare double bedrooms for B&amp;B guests. For one or two months a year, you can rent the whole house.</p>
-      <ul class="offers">
-        <li><a href="stay.html"><b>B&amp;B</b><i>two double rooms</i></a></li>
-        <li><a href="stay.html"><b>The whole house</b><i>one or two months a year</i></a></li>
-      </ul>
-      <a class="room-more" href="stay.html">About staying here</a>
-    </div>
-    <div class="collage">
-      <figure class="snap main" style="--tilt:-2deg">
-        <img src="images/sitting-room.jpg" alt="Evening sun on the fireplace in the sitting room" loading="lazy" style="object-position:35% center">
-        <figcaption>the sitting room</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<section class="room host" id="host">
-  <div class="wrap room-grid">
-    <div class="room-text">
-      <span class="room-word">host</span>
-      <h2>Bring your group to Montecorboli.</h2>
-      <p>Small private dinners, and possibly jazz evenings. The house can also be hired for events, either hands-off or with me catering. A covered outdoor area is planned.</p>
-      <ul class="offers">
-        <li><a href="table.html"><b>Private dinners</b><i>small groups</i></a></li>
-        <li class="later"><span><b>Jazz evenings</b><i>planned</i></span></li>
-        <li><a href="contact.html?interest=events"><b>Event hire</b><i>with or without catering</i></a></li>
-      </ul>
-      <a class="room-more" href="table.html">Lunches, dinners &amp; evenings</a>
-    </div>
-    <div class="collage">
-      <figure class="snap main" style="--tilt:1.5deg;--ratio:4/3;width:92%">
-        <img src="images/house.jpg" alt="The stone house under its pergola, in morning sun" loading="lazy">
-        <figcaption>the front terrace</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<section class="room art sand flip" id="art">
-  <div class="wrap room-grid">
-    <div class="room-text">
-      <span class="room-word">art</span>
-      <h2>Paintings can be seen and bought here.</h2>
-      <p>I also run painting retreats. For residencies, artists stay at an agriturismo nearby that I organise. They work and clean their brushes in the studio here, then have dinner and unwind at Montecorboli.</p>
-      <ul class="offers">
-        <li><a href="contact.html?interest=art"><b>Paintings</b><i>ask about a piece</i></a></li>
-        <li><a href="contact.html?interest=art"><b>Painting retreats</b><i>get in touch</i></a></li>
-        <li class="later"><span><b>Artist residencies</b><i>coming soon</i></span></li>
-      </ul>
-      <a class="room-more" href="contact.html?interest=art">Ask me about the art</a>
-    </div>
-    <div class="collage">
-      <figure class="snap main" style="--tilt:-1deg">
-        <img src="images/studio.jpg" alt="The studio, with an easel and a painting in progress" loading="lazy">
-        <figcaption>the studio</figcaption>
-      </figure>
-      <figure class="snap second" style="--ratio:4/3;width:52%">
-        <img src="images/painting-outdoors.jpg" alt="An easel set up on the path among the trees" loading="lazy">
-        <figcaption>painting outdoors</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<section class="note-section" id="story">
+<section class="host-note" id="story">
   <div class="wrap">
     <div class="letter">
-      <p class="eyebrow">our story</p>
+      <p class="eyebrow">a note from your host</p>
+      <span class="tilde" aria-hidden="true"></span>
       <p>Montecorboli is our home in Tuscany, and we built it by hand. For the last four years I have been getting it ready for guests.</p>
       <p>Painting, cooking and hosting are what I'm good at and what I've made a living from. Here they're all in one place. It's ready enough to start, and it will keep growing.</p>
       <a class="btn" href="contact.html">Get in touch</a>
     </div>
   </div>
 </section>
+
+<div class="courses wrap">
+  <section class="course eat" id="eat">
+    <figure class="course-photo">
+      <img src="images/terrace-dinner.jpg" alt="A table laid for dinner under the pergola" loading="lazy" style="object-position:center 60%">
+    </figure>
+    <div class="course-text">
+      <h2>Eat</h2>
+      <p>I cook for guests at agriturismos nearby, and at our own table.</p>
+      <span class="tilde" aria-hidden="true"></span>
+      <ul class="dishes">
+        <li><a href="private-chef.html"><b>Private chef</b><i>at your agriturismo</i></a></li>
+        <li><a href="table.html"><b>Lunch for tour groups</b><i>cycling &amp; walking</i></a></li>
+        <li><a href="table.html"><b>Private dinners</b><i>small groups</i></a></li>
+        <li><a href="contact.html?interest=chef"><b>Menus</b><i>coming soon, ask me for the current one</i></a></li>
+      </ul>
+      <a class="course-more" href="private-chef.html">About the private chef service</a>
+    </div>
+  </section>
+
+  <section class="course stay" id="stay">
+    <figure class="course-photo">
+      <img src="images/sitting-room.jpg" alt="Evening sun on the fireplace in the sitting room" loading="lazy" style="object-position:35% center">
+    </figure>
+    <div class="course-text">
+      <h2>Stay</h2>
+      <p>For people who love the outdoors, art, books and good food.</p>
+      <span class="tilde" aria-hidden="true"></span>
+      <ul class="dishes">
+        <li><a href="stay.html"><b>B&amp;B</b><i>two double rooms</i></a></li>
+        <li><a href="stay.html"><b>The whole house</b><i>one or two months a year</i></a></li>
+      </ul>
+      <a class="course-more" href="stay.html">About staying here</a>
+    </div>
+  </section>
+
+  <section class="course host" id="host">
+    <figure class="course-photo">
+      <img src="images/house.jpg" alt="The stone house under its pergola, in morning sun" loading="lazy">
+    </figure>
+    <div class="course-text">
+      <h2>Host</h2>
+      <p>Bring your group to Montecorboli. Small private dinners, and possibly jazz evenings. The house can also be hired for events, either hands-off or with me catering. A covered outdoor area is planned.</p>
+      <span class="tilde" aria-hidden="true"></span>
+      <ul class="dishes">
+        <li><a href="table.html"><b>Private dinners</b><i>small groups</i></a></li>
+        <li><a href="contact.html?interest=events"><b>Event hire</b><i>with or without catering</i></a></li>
+        <li class="later"><span><b>Jazz evenings</b><i>planned</i></span></li>
+      </ul>
+      <a class="course-more" href="table.html">Lunches, dinners &amp; evenings</a>
+    </div>
+  </section>
+
+  <section class="course art" id="art">
+    <figure class="course-photo">
+      <img src="images/studio.jpg" alt="The studio, with an easel and a painting in progress" loading="lazy">
+    </figure>
+    <div class="course-text">
+      <h2>Art</h2>
+      <p>Paintings can be seen and bought here. I also run painting retreats. For residencies, artists stay at an agriturismo nearby that I organise. They work and clean their brushes in the studio here, then have dinner and unwind at Montecorboli.</p>
+      <span class="tilde" aria-hidden="true"></span>
+      <ul class="dishes">
+        <li><a href="contact.html?interest=art"><b>Paintings</b><i>ask about a piece</i></a></li>
+        <li><a href="contact.html?interest=art"><b>Painting retreats</b><i>get in touch</i></a></li>
+        <li class="later"><span><b>Artist residencies</b><i>coming soon</i></span></li>
+      </ul>
+      <a class="course-more" href="contact.html?interest=art">Ask me about the art</a>
+    </div>
+  </section>
+</div>
 </main>
 <footer class="site-footer">
   <div class="wrap">
