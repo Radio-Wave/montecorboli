@@ -1,110 +1,83 @@
-tagline: Food, art and hospitality in Tuscany
-description: >-
-  A home in Tuscany for good food, painting and hosting: private chef, lunches
-  and dinners, B&B stays and art.
-share_image: /images/terrace-dinner.jpg
-host_email: ""
-
 carousel:
   - image: /images/house.jpg
-    alt: The stone house under its pergola, in morning sun
     caption: the front terrace
-    focus: ""
+    alt: The stone house under its pergola, in morning sun
   - image: /images/terrace-dinner.jpg
-    alt: A table laid for dinner under the glass pergola, with the hills beyond
     caption: dinner under the pergola
+    alt: A table laid for dinner under the glass pergola, with the hills beyond
     focus: center 62%
   - image: /images/sitting-room.jpg
-    alt: Evening sun on the fireplace in the sitting room
     caption: the sitting room
-    focus: ""
+    alt: Evening sun on the fireplace in the sitting room
   - image: /images/studio.jpg
-    alt: The studio, with an easel and a painting in progress
     caption: the studio
+    alt: The studio, with an easel and a painting in progress
     focus: center 40%
   - image: /images/pond.jpg
-    alt: The stone lily pond in the garden
     caption: the garden
-    focus: ""
+    alt: The stone lily pond in the garden
   - image: /images/painting-outdoors.jpg
-    alt: An easel set up on the path among the trees
     caption: painting outdoors
-    focus: ""
-
+    alt: An easel set up on the path among the trees
 host_note:
-  heading: a note from your host
-  body: >-
-    <p>Montecorboli is our home in Tuscany, and we built it by hand. For the last
-    four years I have been getting it ready for guests.</p><p>Painting, cooking
-    and hosting are what I'm good at and what I've made a living from. Here
-    they're all in one place. It's ready enough to start, and it will keep
+  heading: a short note from your host
+  body: <p>Montecorboli is our home in Tuscany, and we built it by hand. For the
+    last four years I have been getting it ready for guests.</p><p>Painting,
+    cooking and hosting are what I'm good at and what I've made a living from.
+    Here they're all in one place. It's ready enough to start, and it will keep
     growing.</p>
-
 eat:
   title: Eat
   image: /images/terrace-dinner.jpg
   alt: A table laid for dinner under the pergola
   focus: center 60%
-  body: >-
-    <p>I cook for guests at agriturismos nearby, and at our own table.</p><p>If
-    you're staying at an agriturismo nearby, I can come and cook for you as your
-    private chef. Tell me where you're staying and I'll let you know if I can come
-    to you.</p><p>Or come to Montecorboli: I make lunch for organised cycling and
-    walking tours, and small private dinners for groups.</p><p>My menus will be
-    here shortly. In the meantime, <a href="#enquire">ask me</a> and I'll send you
-    the current one.</p>
-
+  body: "<p>I cook for guests at agriturismos nearby, and at our own
+    table.</p><p>If you're staying at an agriturismo nearby, I can come and cook
+    for you as your private chef. Tell me where you're staying and I'll let you
+    know if I can come to you.</p><p>Or come to Montecorboli: I make lunch for
+    organised cycling and walking tours, and small private dinners for
+    groups.</p><p>My menus will be here shortly. In the meantime, <a
+    href=\"#enquire\">ask me</a> and I'll send you the current one.</p>"
 stay:
   title: Stay
   image: /images/sitting-room.jpg
   alt: Evening sun on the fireplace in the sitting room
   focus: 35% center
-  body: >-
-    <p>For people who love the outdoors, art, books and good food.</p><p>We have
-    two spare double bedrooms for B&amp;B guests. For one or two months a year,
-    you can rent the whole house as a holiday rental.</p><p><a
+  body: <p>For people who love the outdoors, art, books and good food.</p><p>We
+    have two spare double bedrooms for B&amp;B guests. For one or two months a
+    year, you can rent the whole house as a holiday rental.</p><p><a
     href="#enquire">Ask me about dates.</a></p>
-
 host:
   title: Host
   image: /images/house.jpg
   alt: The stone house under its pergola, in morning sun
-  focus: ""
-  body: >-
-    <p>Bring your group to Montecorboli. Small private dinners, and possibly jazz
-    evenings: sign up to the newsletter below to hear about them.</p><p>The house
-    can also be hired for events, either hands-off or with me catering. A covered
-    outdoor area is planned.</p><p><a href="#enquire">Ask me about it.</a></p>
-
+  body: '<p>Bring your group to Montecorboli. Small private dinners, and possibly
+    jazz evenings: sign up to the newsletter below to hear about them.</p><p>The
+    house can also be hired for events, either hands-off or with me catering. A
+    covered outdoor area is planned.</p><p><a href="#enquire">Ask me about
+    it.</a></p>'
 art:
   title: Art
   image: /images/studio.jpg
   alt: The studio, with an easel and a painting in progress
-  focus: ""
-  body: >-
-    <p>Paintings can be seen and bought here.</p><p>I also run painting retreats.
-    For residencies, which are coming soon, artists stay at an agriturismo nearby
-    that I organise. They work and clean their brushes in the studio here, then
-    have dinner and unwind at Montecorboli.</p>
-
+  body: <p>Paintings can be seen and bought here.</p><p>I also run painting
+    retreats. For residencies, which are coming soon, artists stay at an
+    agriturismo nearby that I organise. They work and clean their brushes in the
+    studio here, then have dinner and unwind at Montecorboli.</p>
 paintings:
   - title: Painting title
-    image: ""
-    alt: ""
     info: Medium · size · year
   - title: Painting title
-    image: ""
-    alt: ""
     info: Medium · size · year
   - title: Painting title
-    image: ""
-    alt: ""
     info: Medium · size · year
-
 enquire:
   heading: Say hello.
   intro: Tell me what you're interested in and I'll get back to you.
-
 newsletter:
   heading: Letters from the hill
   intro: News, dates and new paintings.
+tagline: Food, art and hospitality in Tuscany
+description: "A home in Tuscany for good food, painting and hosting: private
+  chef, lunches and dinners, B&B stays and art."
+share_image: /images/terrace-dinner.jpg
