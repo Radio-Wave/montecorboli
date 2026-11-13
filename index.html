@@ -1,13 +1,19 @@
+---
+# Content comes from _data/content.yml (edit it with Pages CMS).
+---
+{%- assign c = site.data.content -%}
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Montecorboli · Food, art and hospitality in Tuscany</title>
-<meta name="description" content="A home in Tuscany for good food, painting and hosting: private chef, lunches and dinners, B&amp;B stays and art.">
-<meta property="og:title" content="Montecorboli · Food, art and hospitality in Tuscany">
-<meta property="og:description" content="A home in Tuscany for good food, painting and hosting: private chef, lunches and dinners, B&amp;B stays and art.">
-<meta property="og:image" content="images/terrace-dinner.jpg">
+<title>Montecorboli · {{ c.tagline | escape }}</title>
+<meta name="description" content="{{ c.description | strip | escape }}">
+<meta property="og:title" content="Montecorboli · {{ c.tagline | escape }}">
+<meta property="og:description" content="{{ c.description | strip | escape }}">
+{%- if c.share_image and c.share_image != "" %}
+<meta property="og:image" content="{{ c.share_image | relative_url }}">
+{%- endif %}
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,10 +26,10 @@
     <a class="logo" href="#top">Montecorboli</a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
     <ul class="nav" id="nav">
-      <li><a href="#eat">Eat</a></li>
-      <li><a href="#stay">Stay</a></li>
-      <li><a href="#host">Host</a></li>
-      <li><a href="#art">Art</a></li>
+      <li><a href="#eat">{{ c.eat.title | escape }}</a></li>
+      <li><a href="#stay">{{ c.stay.title | escape }}</a></li>
+      <li><a href="#host">{{ c.host.title | escape }}</a></li>
+      <li><a href="#art">{{ c.art.title | escape }}</a></li>
       <li><a href="#story">Our Story</a></li>
       <li><a class="btn" href="#enquire">Enquire</a></li>
     </ul>
@@ -33,15 +39,12 @@
 <section class="carousel" aria-roledescription="carousel" aria-label="Montecorboli in pictures">
   <div class="wrap">
     <div class="frame">
-      <figure class="slide on"><img src="images/house.jpg" alt="The stone house under its pergola, in morning sun"><figcaption class="visually-hidden">the front terrace</figcaption></figure>
-      <figure class="slide"><img src="images/terrace-dinner.jpg" alt="A table laid for dinner under the glass pergola, with the hills beyond" style="object-position:center 62%"><figcaption class="visually-hidden">dinner under the pergola</figcaption></figure>
-      <figure class="slide"><img src="images/sitting-room.jpg" alt="Evening sun on the fireplace in the sitting room" loading="lazy"><figcaption class="visually-hidden">the sitting room</figcaption></figure>
-      <figure class="slide"><img src="images/studio.jpg" alt="The studio, with an easel and a painting in progress" loading="lazy" style="object-position:center 40%"><figcaption class="visually-hidden">the studio</figcaption></figure>
-      <figure class="slide"><img src="images/pond.jpg" alt="The stone lily pond in the garden" loading="lazy"><figcaption class="visually-hidden">the garden</figcaption></figure>
-      <figure class="slide"><img src="images/painting-outdoors.jpg" alt="An easel set up on the path among the trees" loading="lazy"><figcaption class="visually-hidden">painting outdoors</figcaption></figure>
+      {%- for s in c.carousel %}
+      <figure class="slide{% if forloop.first %} on{% endif %}"><img src="{{ s.image | relative_url }}" alt="{{ s.alt | escape }}"{% unless forloop.first %} loading="lazy"{% endunless %}{% if s.focus and s.focus != "" %} style="object-position:{{ s.focus | escape }}"{% endif %}><figcaption class="visually-hidden">{{ s.caption | escape }}</figcaption></figure>
+      {%- endfor %}
     </div>
     <div class="carousel-bar">
-      <p class="carousel-caption" aria-live="polite">the front terrace</p>
+      <p class="carousel-caption" aria-live="polite">{{ c.carousel.first.caption | escape }}</p>
       <div class="carousel-controls">
         <button type="button" data-prev aria-label="Previous picture">&larr;</button>
         <div class="dots"></div>
@@ -54,96 +57,47 @@
 <section class="host-note" id="story">
   <div class="wrap">
     <div class="letter">
-      <p class="eyebrow">a note from your host</p>
+      <p class="eyebrow">{{ c.host_note.heading | escape }}</p>
       <span class="tilde" aria-hidden="true"></span>
-      <p>Montecorboli is our home in Tuscany, and we built it by hand. For the last four years I have been getting it ready for guests.</p>
-      <p>Painting, cooking and hosting are what I'm good at and what I've made a living from. Here they're all in one place. It's ready enough to start, and it will keep growing.</p>
+      {{ c.host_note.body }}
     </div>
   </div>
 </section>
 
 <div class="courses wrap">
-  <section class="course eat" id="eat">
+  {%- assign courses = "eat,stay,host,art" | split: "," %}
+  {%- for key in courses %}
+  {%- assign s = c[key] %}
+  <section class="course {{ key }}" id="{{ key }}">
+    {%- if s.image and s.image != "" %}
     <figure class="course-photo">
-      <img src="images/terrace-dinner.jpg" alt="A table laid for dinner under the pergola" loading="lazy" style="object-position:center 60%">
+      <img src="{{ s.image | relative_url }}" alt="{{ s.alt | escape }}" loading="lazy"{% if s.focus and s.focus != "" %} style="object-position:{{ s.focus | escape }}"{% endif %}>
     </figure>
+    {%- endif %}
     <div class="course-text">
-      <h2>Eat</h2>
-      <p>I cook for guests at agriturismos nearby, and at our own table.</p>
-      <p>If you're staying at an agriturismo nearby, I can come and cook for you as your private chef. Tell me where you're staying and I'll let you know if I can come to you.</p>
-      <p>Or come to Montecorboli: I make lunch for organised cycling and walking tours, and small private dinners for groups.</p>
-      <p>My menus will be here shortly. In the meantime, <a href="#enquire">ask me</a> and I'll send you the current one.</p>
+      <h2>{{ s.title | escape }}</h2>
+      {{ s.body }}
     </div>
   </section>
-
-  <section class="course stay" id="stay">
-    <figure class="course-photo">
-      <img src="images/sitting-room.jpg" alt="Evening sun on the fireplace in the sitting room" loading="lazy" style="object-position:35% center">
-    </figure>
-    <div class="course-text">
-      <h2>Stay</h2>
-      <p>For people who love the outdoors, art, books and good food.</p>
-      <p>We have two spare double bedrooms for B&amp;B guests. For one or two months a year, you can rent the whole house as a holiday rental.</p>
-      <p><a href="#enquire">Ask me about dates.</a></p>
-    </div>
-  </section>
-
-  <section class="course host" id="host">
-    <figure class="course-photo">
-      <img src="images/house.jpg" alt="The stone house under its pergola, in morning sun" loading="lazy">
-    </figure>
-    <div class="course-text">
-      <h2>Host</h2>
-      <p>Bring your group to Montecorboli. Small private dinners, and possibly jazz evenings: sign up to the newsletter below to hear about them.</p>
-      <p>The house can also be hired for events, either hands-off or with me catering. A covered outdoor area is planned.</p>
-      <p><a href="#enquire">Ask me about it.</a></p>
-    </div>
-  </section>
-
-  <section class="course art" id="art">
-    <figure class="course-photo">
-      <img src="images/studio.jpg" alt="The studio, with an easel and a painting in progress" loading="lazy">
-    </figure>
-    <div class="course-text">
-      <h2>Art</h2>
-      <p>Paintings can be seen and bought here.</p>
-      <p>I also run painting retreats. For residencies, which are coming soon, artists stay at an agriturismo nearby that I organise. They work and clean their brushes in the studio here, then have dinner and unwind at Montecorboli.</p>
-    </div>
-  </section>
+  {%- endfor %}
 
   <div class="gallery-wrap">
     <p class="eyebrow">paintings</p>
-    <!-- ADD PAINTINGS HERE. One <article class="painting"> per painting:
-    <article class="painting">
-      <figure class="painting-img"><img src="images/paintings/your-file.jpg" alt="Short description of the painting" loading="lazy"></figure>
-      <h3>Title of the painting</h3>
-      <p class="painting-info">Oil on canvas · 50 × 70 cm · 2025</p>
-      <p class="painting-price">€ 000</p>          (or "Sold", or "Price on request")
-      <a class="painting-ask" href="#enquire" data-painting="Title of the painting">Ask about this painting</a>
-    </article>
-    The data-painting value is copied into the enquiry message when someone clicks "Ask". -->
     <div class="gallery">
-        <article class="painting">
-          <div class="painting-img todo">photo to come</div>
-          <h3>Painting title</h3>
-          <p class="painting-info">Medium · size · year</p>
-          <p class="painting-price">Price</p>
-          <a class="painting-ask" href="#enquire" data-painting="Painting title">Ask about this painting</a>
-        </article>
-        <article class="painting">
-          <div class="painting-img todo">photo to come</div>
-          <h3>Painting title</h3>
-          <p class="painting-info">Medium · size · year</p>
-          <p class="painting-price">Price</p>
-          <a class="painting-ask" href="#enquire" data-painting="Painting title">Ask about this painting</a>
-        </article>
-        <article class="painting">
-          <div class="painting-img todo">photo to come</div>
-          <h3>Painting title</h3>
-          <p class="painting-info">Medium · size · year</p>
-          <p class="painting-price">Price</p>
-          <a class="painting-ask" href="#enquire" data-painting="Painting title">Ask about this painting</a>
-        </article>
+      {%- for p in c.paintings %}
+      <article class="painting">
+        {%- if p.image and p.image != "" %}
+        <figure class="painting-img"><img src="{{ p.image | relative_url }}" alt="{% if p.alt and p.alt != "" %}{{ p.alt | escape }}{% else %}{{ p.title | escape }}{% endif %}" loading="lazy"></figure>
+        {%- else %}
+        <div class="painting-img todo">photo to come</div>
+        {%- endif %}
+        <h3>{{ p.title | escape }}</h3>
+        {%- if p.info and p.info != "" %}
+        <p class="painting-info">{{ p.info | escape }}</p>
+        {%- endif %}
+        <a class="painting-ask" href="#enquire" data-painting="{{ p.title | escape }}">Ask about this painting</a>
+      </article>
+      {%- endfor %}
     </div>
   </div>
 </div>
@@ -151,8 +105,8 @@
 <section class="panel" id="enquire">
   <div class="wrap">
     <p class="eyebrow">enquire</p>
-    <h2>Say hello.</h2>
-    <p>Tell me what you're interested in and I'll get back to you.</p>
+    <h2>{{ c.enquire.heading | escape }}</h2>
+    <p>{{ c.enquire.intro | escape }}</p>
     <div class="enquire">
       <form class="form" data-enquiry>
         <input type="hidden" name="_subject" value="Enquiry from the website">
@@ -165,7 +119,12 @@
       <aside class="write-direct">
         <p class="eyebrow">or write to me directly</p>
         <span class="tilde" aria-hidden="true"></span>
-        <a class="host-email" data-host-email href="#enquire">email address coming soon</a>
+        {%- assign email = c.host_email | strip %}
+        {%- if email != "" %}
+        <a class="host-email" href="mailto:{{ email | escape }}">{{ email | escape }}</a>
+        {%- else %}
+        <a class="host-email pending" href="#enquire">email address coming soon</a>
+        {%- endif %}
       </aside>
     </div>
   </div>
@@ -176,21 +135,21 @@
     <div class="footer-grid">
       <div>
         <a class="logo" href="#top">Montecorboli</a>
-        <p>Food, art and hospitality in Tuscany.</p>
+        <p>{{ c.tagline | escape }}.</p>
       </div>
       <div>
         <h4>Visit</h4>
         <ul>
-          <li><a href="#eat">Eat</a></li>
-          <li><a href="#stay">Stay</a></li>
-          <li><a href="#host">Host</a></li>
-          <li><a href="#art">Art</a></li>
+          <li><a href="#eat">{{ c.eat.title | escape }}</a></li>
+          <li><a href="#stay">{{ c.stay.title | escape }}</a></li>
+          <li><a href="#host">{{ c.host.title | escape }}</a></li>
+          <li><a href="#art">{{ c.art.title | escape }}</a></li>
           <li><a href="#enquire">Enquire</a></li>
         </ul>
       </div>
       <div>
-        <h4>Letters from the hill</h4>
-        <p>News, dates and new paintings.</p>
+        <h4>{{ c.newsletter.heading | escape }}</h4>
+        <p>{{ c.newsletter.intro | escape }}</p>
         <form data-newsletter>
           <div class="newsletter">
             <label class="visually-hidden" for="nl-email">Email</label>
@@ -203,7 +162,7 @@
       </div>
     </div>
     <div class="footer-base">
-      <span>&copy; <span data-year>2026</span> Montecorboli, Tuscany</span>
+      <span>&copy; <span data-year>{{ site.time | date: "%Y" }}</span> Montecorboli, Tuscany</span>
       <span>English · <span title="Coming later">Italiano presto</span></span>
     </div>
   </div>

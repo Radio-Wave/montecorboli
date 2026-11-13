@@ -1,0 +1,7 @@
+# GitHub Pages builds this site with Jekyll. Site text and photos live in
+# _data/content.yml and are edited with Pages CMS (see .pages.yml).
+exclude:
+  - README.md
+  - .pages.yml
+  - Gemfile
+  - Gemfile.lock

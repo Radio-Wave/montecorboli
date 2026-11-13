@@ -1,0 +1,158 @@
+# Pages CMS configuration: https://pagescms.org/docs/configuration/
+# Sign in at https://app.pagescms.org with GitHub and open this repository.
+# Everything edited here is saved to _data/content.yml; GitHub Pages rebuilds the site.
+
+media:
+  input: images
+  output: /images
+  categories: [image]
+  rename: safe
+
+components:
+  photo_section:
+    type: object
+    fields:
+      - name: title
+        label: Heading
+        type: string
+        required: true
+      - name: image
+        label: Photo
+        type: image
+      - name: alt
+        label: Photo description
+        type: string
+        description: A short description of the photo, for people using screen readers.
+      - name: focus
+        label: Photo focus (optional)
+        type: string
+        description: Which part of the photo to keep when it's cropped, e.g. "center 60%" (lower) or "35% center" (further left). Leave empty for the middle.
+      - name: body
+        label: Text
+        type: rich-text
+        options:
+          format: html
+          media: false
+
+content:
+  - name: content
+    label: Site content
+    type: file
+    path: _data/content.yml
+    format: yaml
+    fields:
+      - name: carousel
+        label: Carousel photos
+        type: object
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{caption}"
+        fields:
+          - name: image
+            label: Photo
+            type: image
+            required: true
+          - name: caption
+            label: Caption
+            type: string
+            description: Shown under the photo.
+          - name: alt
+            label: Photo description
+            type: string
+            description: A short description of the photo, for people using screen readers.
+          - name: focus
+            label: Photo focus (optional)
+            type: string
+            description: Which part of the photo to keep when it's cropped, e.g. "center 60%". Leave empty for the middle.
+
+      - name: host_note
+        label: Note from the host
+        type: object
+        fields:
+          - name: heading
+            label: Small heading
+            type: string
+          - name: body
+            label: Text
+            type: rich-text
+            options:
+              format: html
+              media: false
+
+      - name: eat
+        label: Eat
+        component: photo_section
+      - name: stay
+        label: Stay
+        component: photo_section
+      - name: host
+        label: Host
+        component: photo_section
+      - name: art
+        label: Art
+        component: photo_section
+
+      - name: paintings
+        label: Paintings
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: image
+            label: Photo
+            type: image
+            options:
+              path: images/paintings
+          - name: alt
+            label: Photo description
+            type: string
+          - name: info
+            label: Details
+            type: string
+            description: e.g. "Oil on canvas · 50 × 70 cm · 2025"
+
+      - name: enquire
+        label: Enquire section
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: intro
+            label: Intro
+            type: text
+
+      - name: newsletter
+        label: Newsletter (footer)
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: intro
+            label: Intro
+            type: text
+
+      - name: host_email
+        label: Host email
+        type: string
+        description: Shown next to the enquiry form. Leave empty to show "email address coming soon".
+      - name: tagline
+        label: Tagline
+        type: string
+        description: Used in the browser tab title and the footer.
+      - name: description
+        label: Search & sharing description
+        type: text
+      - name: share_image
+        label: Sharing image
+        type: image
+        description: The picture shown when the site is shared on social media or in messages.

@@ -84,17 +84,6 @@ if (carousel) {
   start();
 }
 
-// The host's email, shown next to every enquiry form. Fill this in once.
-const HOST_EMAIL = "";
-document.querySelectorAll("[data-host-email]").forEach((a) => {
-  if (HOST_EMAIL) {
-    a.href = "mailto:" + HOST_EMAIL;
-    a.textContent = HOST_EMAIL;
-  } else {
-    a.classList.add("pending");
-  }
-});
-
 // "Ask about this painting": start the message for them
 document.querySelectorAll("[data-painting]").forEach((a) =>
   a.addEventListener("click", () => {
